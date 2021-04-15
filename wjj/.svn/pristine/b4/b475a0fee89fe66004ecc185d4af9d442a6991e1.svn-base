@@ -1,0 +1,845 @@
+---------------------------------------------------------------
+
+[2021-03-25T08:34:31+08:00] 127.0.0.1 GET www.wdj.com/admin
+[运行时间：1.056741s] [吞吐率：0.95req/s] [内存消耗：896.50kb] [文件加载：68]
+[ info ] [ LANG ] D:\wapm\www\wendajun\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wdj.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36 Edg/89.0.774.57',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'referer' => 'http://www.wdj.com/admin',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wapm\www\wendajun\application\admin\view\index\index.html [ array (
+  0 => 'arr',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.731511s ] mysql:host=192.168.75.50;port=3306;dbname=survey;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin_release` [ RunTime:0.008002s ]
+[ sql ] [ SQL ] SELECT * FROM `admin_release` [ RunTime:0.006578s ]
+---------------------------------------------------------------
+
+[2021-03-25T08:34:33+08:00] 127.0.0.1 GET www.wdj.com/admin
+[运行时间：0.029557s] [吞吐率：33.83req/s] [内存消耗：564.04kb] [文件加载：68]
+[ info ] [ LANG ] D:\wapm\www\wendajun\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wdj.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36 Edg/89.0.774.57',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'referer' => 'http://www.wdj.com/admin',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wapm\www\wendajun\application\admin\view\index\index.html [ array (
+  0 => 'arr',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004757s ] mysql:host=192.168.75.50;port=3306;dbname=survey;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin_release` [ RunTime:0.004358s ]
+[ sql ] [ SQL ] SELECT * FROM `admin_release` [ RunTime:0.003283s ]
+---------------------------------------------------------------
+
+[2021-03-25T08:34:53+08:00] 127.0.0.1 GET www.wdj.com/admin
+[运行时间：0.044884s] [吞吐率：22.28req/s] [内存消耗：564.04kb] [文件加载：68]
+[ info ] [ LANG ] D:\wapm\www\wendajun\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wdj.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36 Edg/89.0.774.57',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'referer' => 'http://www.wdj.com/admin',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wapm\www\wendajun\application\admin\view\index\index.html [ array (
+  0 => 'arr',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.014056s ] mysql:host=192.168.75.50;port=3306;dbname=survey;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin_release` [ RunTime:0.005198s ]
+[ sql ] [ SQL ] SELECT * FROM `admin_release` [ RunTime:0.003367s ]
+---------------------------------------------------------------
+
+[2021-03-25T08:39:32+08:00] 127.0.0.1 GET www.wdj.com/admin
+[运行时间：0.044678s] [吞吐率：22.38req/s] [内存消耗：564.04kb] [文件加载：68]
+[ info ] [ LANG ] D:\wapm\www\wendajun\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wdj.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36 Edg/89.0.774.57',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'referer' => 'http://www.wdj.com/admin',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wapm\www\wendajun\application\admin\view\index\index.html [ array (
+  0 => 'arr',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006401s ] mysql:host=192.168.75.50;port=3306;dbname=survey;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin_release` [ RunTime:0.005457s ]
+[ sql ] [ SQL ] SELECT * FROM `admin_release` [ RunTime:0.002949s ]
+---------------------------------------------------------------
+
+[2021-03-25T08:39:34+08:00] 127.0.0.1 GET www.wdj.com/admin
+[运行时间：0.043458s] [吞吐率：23.01req/s] [内存消耗：564.04kb] [文件加载：68]
+[ info ] [ LANG ] D:\wapm\www\wendajun\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wdj.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36 Edg/89.0.774.57',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'referer' => 'http://www.wdj.com/admin',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wapm\www\wendajun\application\admin\view\index\index.html [ array (
+  0 => 'arr',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.014346s ] mysql:host=192.168.75.50;port=3306;dbname=survey;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin_release` [ RunTime:0.007540s ]
+[ sql ] [ SQL ] SELECT * FROM `admin_release` [ RunTime:0.004698s ]
+---------------------------------------------------------------
+
+[2021-03-25T08:41:13+08:00] 127.0.0.1 GET www.wdj.com/admin
+[运行时间：0.038843s] [吞吐率：25.74req/s] [内存消耗：564.04kb] [文件加载：68]
+[ info ] [ LANG ] D:\wapm\www\wendajun\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wdj.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36 Edg/89.0.774.57',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'referer' => 'http://www.wdj.com/admin',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wapm\www\wendajun\application\admin\view\index\index.html [ array (
+  0 => 'arr',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011255s ] mysql:host=192.168.75.50;port=3306;dbname=survey;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin_release` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT * FROM `admin_release` [ RunTime:0.004009s ]
+---------------------------------------------------------------
+
+[2021-03-25T08:41:16+08:00] 127.0.0.1 GET www.wdj.com/admin
+[运行时间：0.037457s] [吞吐率：26.70req/s] [内存消耗：564.04kb] [文件加载：68]
+[ info ] [ LANG ] D:\wapm\www\wendajun\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wdj.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36 Edg/89.0.774.57',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'referer' => 'http://www.wdj.com/admin',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wapm\www\wendajun\application\admin\view\index\index.html [ array (
+  0 => 'arr',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.007798s ] mysql:host=192.168.75.50;port=3306;dbname=survey;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin_release` [ RunTime:0.006596s ]
+[ sql ] [ SQL ] SELECT * FROM `admin_release` [ RunTime:0.007970s ]
+---------------------------------------------------------------
+
+[2021-03-25T08:41:31+08:00] 127.0.0.1 GET www.wdj.com/admin
+[运行时间：0.037734s] [吞吐率：26.50req/s] [内存消耗：564.04kb] [文件加载：68]
+[ info ] [ LANG ] D:\wapm\www\wendajun\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wdj.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36 Edg/89.0.774.57',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'referer' => 'http://www.wdj.com/admin',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wapm\www\wendajun\application\admin\view\index\index.html [ array (
+  0 => 'arr',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009724s ] mysql:host=192.168.75.50;port=3306;dbname=survey;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin_release` [ RunTime:0.005069s ]
+[ sql ] [ SQL ] SELECT * FROM `admin_release` [ RunTime:0.004281s ]
+---------------------------------------------------------------
+
+[2021-03-25T08:41:46+08:00] 127.0.0.1 GET www.wdj.com/admin
+[运行时间：0.078104s] [吞吐率：12.80req/s] [内存消耗：564.04kb] [文件加载：68]
+[ info ] [ LANG ] D:\wapm\www\wendajun\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wdj.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36 Edg/89.0.774.57',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'referer' => 'http://www.wdj.com/admin',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wapm\www\wendajun\application\admin\view\index\index.html [ array (
+  0 => 'arr',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.030393s ] mysql:host=192.168.75.50;port=3306;dbname=survey;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin_release` [ RunTime:0.019113s ]
+[ sql ] [ SQL ] SELECT * FROM `admin_release` [ RunTime:0.007675s ]
+---------------------------------------------------------------
+
+[2021-03-25T08:42:59+08:00] 127.0.0.1 GET www.wdj.com/admin
+[运行时间：0.041364s] [吞吐率：24.18req/s] [内存消耗：564.04kb] [文件加载：68]
+[ info ] [ LANG ] D:\wapm\www\wendajun\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wdj.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36 Edg/89.0.774.57',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'referer' => 'http://www.wdj.com/admin',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wapm\www\wendajun\application\admin\view\index\index.html [ array (
+  0 => 'arr',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005059s ] mysql:host=192.168.75.50;port=3306;dbname=survey;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin_release` [ RunTime:0.008490s ]
+[ sql ] [ SQL ] SELECT * FROM `admin_release` [ RunTime:0.003505s ]
+---------------------------------------------------------------
+
+[2021-03-25T08:42:59+08:00] 127.0.0.1 GET www.wdj.com/admin
+[运行时间：0.026394s] [吞吐率：37.89req/s] [内存消耗：564.04kb] [文件加载：68]
+[ info ] [ LANG ] D:\wapm\www\wendajun\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wdj.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36 Edg/89.0.774.57',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'referer' => 'http://www.wdj.com/admin',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wapm\www\wendajun\application\admin\view\index\index.html [ array (
+  0 => 'arr',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006781s ] mysql:host=192.168.75.50;port=3306;dbname=survey;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin_release` [ RunTime:0.004594s ]
+[ sql ] [ SQL ] SELECT * FROM `admin_release` [ RunTime:0.003259s ]
+---------------------------------------------------------------
+
+[2021-03-25T08:47:07+08:00] 127.0.0.1 GET www.wdj.com/admin
+[运行时间：0.052401s] [吞吐率：19.08req/s] [内存消耗：564.04kb] [文件加载：68]
+[ info ] [ LANG ] D:\wapm\www\wendajun\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wdj.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36 Edg/89.0.774.57',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'referer' => 'http://www.wdj.com/admin',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wapm\www\wendajun\application\admin\view\index\index.html [ array (
+  0 => 'arr',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.013403s ] mysql:host=192.168.75.50;port=3306;dbname=survey;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin_release` [ RunTime:0.006706s ]
+[ sql ] [ SQL ] SELECT * FROM `admin_release` [ RunTime:0.003627s ]
+---------------------------------------------------------------
+
+[2021-03-25T08:48:44+08:00] 127.0.0.1 GET www.wdj.com/question
+[运行时间：0.037426s] [吞吐率：26.72req/s] [内存消耗：469.88kb] [文件加载：66]
+[ info ] [ LANG ] D:\wapm\www\wendajun\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'question',
+  'route' => 'home/question/index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wdj.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36 Edg/89.0.774.57',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'referer' => 'http://www.wdj.com/admin',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] D:\wapm\www\wendajun\application\home\view\question\question.html [ array (
+) ]
+---------------------------------------------------------------
+
+[2021-03-25T08:48:56+08:00] 127.0.0.1 POST www.wdj.com/question
+[运行时间：0.028013s] [吞吐率：35.70req/s] [内存消耗：324.23kb] [文件加载：53]
+[ info ] [ LANG ] D:\wapm\www\wendajun\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+
+[2021-03-25T08:49:31+08:00] 127.0.0.1 GET www.wdj.com/admin
+[运行时间：0.036859s] [吞吐率：27.13req/s] [内存消耗：563.52kb] [文件加载：68]
+[ info ] [ LANG ] D:\wapm\www\wendajun\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wdj.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36 Edg/89.0.774.57',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'referer' => 'http://www.wdj.com/admin',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wapm\www\wendajun\application\admin\view\index\index.html [ array (
+  0 => 'arr',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010219s ] mysql:host=192.168.75.50;port=3306;dbname=survey;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin_release` [ RunTime:0.004645s ]
+[ sql ] [ SQL ] SELECT * FROM `admin_release` [ RunTime:0.005095s ]
+---------------------------------------------------------------
+
+[2021-03-25T08:50:09+08:00] 127.0.0.1 GET www.wdj.com/admin
+[运行时间：0.041128s] [吞吐率：24.31req/s] [内存消耗：640.27kb] [文件加载：70]
+[ info ] [ LANG ] D:\wapm\www\wendajun\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wdj.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36 Edg/89.0.774.57',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'referer' => 'http://www.wdj.com/admin',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wapm\www\wendajun\application\admin\view\index\index.html [ array (
+  0 => 'arr',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.008385s ] mysql:host=192.168.75.50;port=3306;dbname=survey;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin_release` [ RunTime:0.003676s ]
+[ sql ] [ SQL ] SELECT * FROM `admin_release` [ RunTime:0.002800s ]
+---------------------------------------------------------------
+
+[2021-03-25T08:50:24+08:00] 127.0.0.1 GET www.wdj.com/admin
+[运行时间：0.050253s] [吞吐率：19.90req/s] [内存消耗：640.27kb] [文件加载：70]
+[ info ] [ LANG ] D:\wapm\www\wendajun\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wdj.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36 Edg/89.0.774.57',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'referer' => 'http://www.wdj.com/admin',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wapm\www\wendajun\application\admin\view\index\index.html [ array (
+  0 => 'arr',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.013138s ] mysql:host=192.168.75.50;port=3306;dbname=survey;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin_release` [ RunTime:0.006535s ]
+[ sql ] [ SQL ] SELECT * FROM `admin_release` [ RunTime:0.008005s ]
+---------------------------------------------------------------
+
+[2021-03-25T08:51:04+08:00] 127.0.0.1 GET www.wdj.com/admin
+[运行时间：0.036915s] [吞吐率：27.09req/s] [内存消耗：640.27kb] [文件加载：70]
+[ info ] [ LANG ] D:\wapm\www\wendajun\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wdj.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36 Edg/89.0.774.57',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'referer' => 'http://www.wdj.com/admin',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wapm\www\wendajun\application\admin\view\index\index.html [ array (
+  0 => 'arr',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005334s ] mysql:host=192.168.75.50;port=3306;dbname=survey;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin_release` [ RunTime:0.003614s ]
+[ sql ] [ SQL ] SELECT * FROM `admin_release` [ RunTime:0.004003s ]
+---------------------------------------------------------------
+
+[2021-03-25T08:51:11+08:00] 127.0.0.1 GET www.wdj.com/home
+[运行时间：0.026716s] [吞吐率：37.43req/s] [内存消耗：473.66kb] [文件加载：68]
+[ info ] [ LANG ] D:\wapm\www\wendajun\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'home',
+  'route' => 'home/Home/index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wdj.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36 Edg/89.0.774.57',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'referer' => 'http://www.wdj.com/admin',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] D:\wapm\www\wendajun\application\home\view\home.html [ array (
+) ]
+---------------------------------------------------------------
+
+[2021-03-25T08:51:12+08:00] 127.0.0.1 GET www.wdj.com/captcha.html
+[运行时间：0.089187s] [吞吐率：11.21req/s] [内存消耗：345.67kb] [文件加载：53]
+[ info ] [ LANG ] D:\wapm\www\wendajun\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'captcha/<id?>',
+  'route' => '\\think\\captcha\\CaptchaController@index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wdj.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36 Edg/89.0.774.57',
+  'accept' => 'image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8',
+  'referer' => 'http://www.wdj.com/home',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+
+[2021-03-25T08:51:44+08:00] 127.0.0.1 GET www.wdj.com/circle
+[运行时间：0.021971s] [吞吐率：45.51req/s] [内存消耗：395.22kb] [文件加载：66]
+[ info ] [ LANG ] D:\wapm\www\wendajun\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'circle',
+  'route' => 'home/Circle/index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wdj.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36 Edg/89.0.774.57',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'referer' => 'http://www.wdj.com/home',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+  'cookie' => 'PHPSESSID=s3cet3raq6jduha5bmrm2be5vg',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] D:\wapm\www\wendajun\application\home\view\circle.html [ array (
+) ]
+---------------------------------------------------------------
+
+[2021-03-25T08:51:51+08:00] 127.0.0.1 GET www.wdj.com/admin/Index/index
+[运行时间：0.033186s] [吞吐率：30.13req/s] [内存消耗：565.51kb] [文件加载：68]
+[ info ] [ LANG ] D:\wapm\www\wendajun\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wdj.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36 Edg/89.0.774.57',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'referer' => 'http://www.wdj.com/circle',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+  'cookie' => 'PHPSESSID=s3cet3raq6jduha5bmrm2be5vg',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wapm\www\wendajun\application\admin\view\index\index.html [ array (
+  0 => 'arr',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004993s ] mysql:host=192.168.75.50;port=3306;dbname=survey;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin_release` [ RunTime:0.003794s ]
+[ sql ] [ SQL ] SELECT * FROM `admin_release` [ RunTime:0.005268s ]
+---------------------------------------------------------------
+
+[2021-03-25T08:51:51+08:00] 127.0.0.1 GET www.wdj.com/admin/Index/static/admin/css/font-awesome.css
+[运行时间：0.031830s] [吞吐率：31.42req/s] [内存消耗：368.83kb] [文件加载：65]
+[ info ] [ LANG ] D:\wapm\www\wendajun\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wdj.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36 Edg/89.0.774.57',
+  'accept' => 'text/css,*/*;q=0.1',
+  'referer' => 'http://www.wdj.com/admin/Index/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+  'cookie' => 'PHPSESSID=s3cet3raq6jduha5bmrm2be5vg',
+)
+[ info ] [ PARAM ] array (
+  'admin' => 'css',
+)
+---------------------------------------------------------------
+
+[2021-03-25T08:51:51+08:00] 127.0.0.1 GET www.wdj.com/admin/static/admin/images/10.jpg
+[运行时间：0.029208s] [吞吐率：34.24req/s] [内存消耗：370.51kb] [文件加载：65]
+[ info ] [ LANG ] D:\wapm\www\wendajun\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wdj.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36 Edg/89.0.774.57',
+  'accept' => 'image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8',
+  'referer' => 'http://www.wdj.com/admin/Index/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+  'cookie' => 'PHPSESSID=s3cet3raq6jduha5bmrm2be5vg',
+)
+[ info ] [ PARAM ] array (
+  'images' => '10.jpg',
+)
+---------------------------------------------------------------
+
+[2021-03-25T08:51:56+08:00] 127.0.0.1 GET www.wdj.com/admin/Index/home
+[运行时间：0.017016s] [吞吐率：58.77req/s] [内存消耗：368.95kb] [文件加载：65]
+[ info ] [ LANG ] D:\wapm\www\wendajun\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wdj.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36 Edg/89.0.774.57',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'referer' => 'http://www.wdj.com/admin/Index/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+  'cookie' => 'PHPSESSID=s3cet3raq6jduha5bmrm2be5vg',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+
+[2021-03-25T08:52:06+08:00] 127.0.0.1 GET www.wdj.com/admin/Index/index
+[运行时间：0.026170s] [吞吐率：38.21req/s] [内存消耗：564.49kb] [文件加载：68]
+[ info ] [ LANG ] D:\wapm\www\wendajun\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wdj.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36 Edg/89.0.774.57',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'referer' => 'http://www.wdj.com/circle',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+  'cookie' => 'PHPSESSID=s3cet3raq6jduha5bmrm2be5vg',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wapm\www\wendajun\application\admin\view\index\index.html [ array (
+  0 => 'arr',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004898s ] mysql:host=192.168.75.50;port=3306;dbname=survey;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin_release` [ RunTime:0.003907s ]
+[ sql ] [ SQL ] SELECT * FROM `admin_release` [ RunTime:0.003118s ]
+---------------------------------------------------------------
+
+[2021-03-25T08:52:06+08:00] 127.0.0.1 GET www.wdj.com/admin/Index/static/admin/css/font-awesome.css
+[运行时间：0.043470s] [吞吐率：23.00req/s] [内存消耗：368.83kb] [文件加载：65]
+[ info ] [ LANG ] D:\wapm\www\wendajun\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wdj.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36 Edg/89.0.774.57',
+  'accept' => 'text/css,*/*;q=0.1',
+  'referer' => 'http://www.wdj.com/admin/Index/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+  'cookie' => 'PHPSESSID=s3cet3raq6jduha5bmrm2be5vg',
+)
+[ info ] [ PARAM ] array (
+  'admin' => 'css',
+)
+---------------------------------------------------------------
+
+[2021-03-25T08:52:06+08:00] 127.0.0.1 GET www.wdj.com/admin/static/admin/images/10.jpg
+[运行时间：0.034157s] [吞吐率：29.28req/s] [内存消耗：369.40kb] [文件加载：65]
+[ info ] [ LANG ] D:\wapm\www\wendajun\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wdj.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36 Edg/89.0.774.57',
+  'accept' => 'image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8',
+  'referer' => 'http://www.wdj.com/admin/Index/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+  'cookie' => 'PHPSESSID=s3cet3raq6jduha5bmrm2be5vg',
+)
+[ info ] [ PARAM ] array (
+  'images' => '10.jpg',
+)
+---------------------------------------------------------------
+
+[2021-03-25T08:52:07+08:00] 127.0.0.1 GET www.wdj.com/admin/Index/index
+[运行时间：0.036299s] [吞吐率：27.55req/s] [内存消耗：564.49kb] [文件加载：68]
+[ info ] [ LANG ] D:\wapm\www\wendajun\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wdj.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36 Edg/89.0.774.57',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'referer' => 'http://www.wdj.com/circle',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+  'cookie' => 'PHPSESSID=s3cet3raq6jduha5bmrm2be5vg',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wapm\www\wendajun\application\admin\view\index\index.html [ array (
+  0 => 'arr',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012746s ] mysql:host=192.168.75.50;port=3306;dbname=survey;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin_release` [ RunTime:0.004237s ]
+[ sql ] [ SQL ] SELECT * FROM `admin_release` [ RunTime:0.003053s ]
+---------------------------------------------------------------
+
+[2021-03-25T08:52:07+08:00] 127.0.0.1 GET www.wdj.com/admin/Index/static/admin/css/font-awesome.css
+[运行时间：0.031980s] [吞吐率：31.27req/s] [内存消耗：368.83kb] [文件加载：65]
+[ info ] [ LANG ] D:\wapm\www\wendajun\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wdj.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36 Edg/89.0.774.57',
+  'accept' => 'text/css,*/*;q=0.1',
+  'referer' => 'http://www.wdj.com/admin/Index/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+  'cookie' => 'PHPSESSID=s3cet3raq6jduha5bmrm2be5vg',
+)
+[ info ] [ PARAM ] array (
+  'admin' => 'css',
+)
+---------------------------------------------------------------
+
+[2021-03-25T08:52:07+08:00] 127.0.0.1 GET www.wdj.com/admin/static/admin/images/10.jpg
+[运行时间：0.020113s] [吞吐率：49.72req/s] [内存消耗：369.40kb] [文件加载：65]
+[ info ] [ LANG ] D:\wapm\www\wendajun\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wdj.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36 Edg/89.0.774.57',
+  'accept' => 'image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8',
+  'referer' => 'http://www.wdj.com/admin/Index/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+  'cookie' => 'PHPSESSID=s3cet3raq6jduha5bmrm2be5vg',
+)
+[ info ] [ PARAM ] array (
+  'images' => '10.jpg',
+)
+---------------------------------------------------------------
+
+[2021-03-25T08:58:02+08:00] 127.0.0.1 GET www.wdj.com/admin/Index/index
+[运行时间：0.045310s] [吞吐率：22.07req/s] [内存消耗：564.49kb] [文件加载：68]
+[ info ] [ LANG ] D:\wapm\www\wendajun\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wdj.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36 Edg/89.0.774.57',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'referer' => 'http://www.wdj.com/circle',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+  'cookie' => 'PHPSESSID=s3cet3raq6jduha5bmrm2be5vg',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wapm\www\wendajun\application\admin\view\index\index.html [ array (
+  0 => 'arr',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005747s ] mysql:host=192.168.75.50;port=3306;dbname=survey;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin_release` [ RunTime:0.006251s ]
+[ sql ] [ SQL ] SELECT * FROM `admin_release` [ RunTime:0.003383s ]
+---------------------------------------------------------------
+
+[2021-03-25T08:58:02+08:00] 127.0.0.1 GET www.wdj.com/admin/Index/static/admin/css/font-awesome.css
+[运行时间：0.023391s] [吞吐率：42.75req/s] [内存消耗：368.83kb] [文件加载：65]
+[ info ] [ LANG ] D:\wapm\www\wendajun\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wdj.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36 Edg/89.0.774.57',
+  'accept' => 'text/css,*/*;q=0.1',
+  'referer' => 'http://www.wdj.com/admin/Index/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+  'cookie' => 'PHPSESSID=s3cet3raq6jduha5bmrm2be5vg',
+)
+[ info ] [ PARAM ] array (
+  'admin' => 'css',
+)
+---------------------------------------------------------------
+
+[2021-03-25T08:58:02+08:00] 127.0.0.1 GET www.wdj.com/admin/static/admin/images/10.jpg
+[运行时间：0.018516s] [吞吐率：54.01req/s] [内存消耗：369.40kb] [文件加载：65]
+[ info ] [ LANG ] D:\wapm\www\wendajun\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wdj.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36 Edg/89.0.774.57',
+  'accept' => 'image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8',
+  'referer' => 'http://www.wdj.com/admin/Index/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+  'cookie' => 'PHPSESSID=s3cet3raq6jduha5bmrm2be5vg',
+)
+[ info ] [ PARAM ] array (
+  'images' => '10.jpg',
+)

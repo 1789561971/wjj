@@ -1,0 +1,148 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+li{
+	list-style-type: none;
+}
+a{
+	text-decoration: none;
+}
+button{
+	appearance:none;
+}
+/*主div的css*/
+.box_question{
+	width: 100%;
+	height: 965px;
+	background:rgb(245,245,245);
+}
+/*浏览条*/
+.question_top{
+	width: 100%;
+	height: 40px;
+	background: black;
+	position: fixed;
+}
+.top_i{
+	width: 8%;
+	height: 40px;
+	background: deepskyblue;
+	line-height: 40px;
+	text-align: center;
+	margin-left: 70%;
+}
+/*左侧导航栏*/
+.question_right{
+	width: 12%;
+	height: 600px;
+	background: white;
+	margin-left: 25%;
+	margin-top: 8%;
+	float: left;
+	position: fixed;
+}
+/*下拉框*/
+.right_sel{
+	width: 80%;
+	height: 40px;
+	margin-left: 10%;
+	border-radius: 5px;
+	margin-top: 55%;
+	appearance:none;
+	overflow: hidden;
+}
+/*添加*/
+.right_inp{
+	width: 50%;
+	height: 50px;
+	margin-left: 25%;
+	margin-top: 55%;
+	border-radius: 10px;
+}
+/*右侧问卷设计内容*/
+.question_left{
+	width: 40%;
+	height: 900px;
+	float: left;
+	background: white;
+	margin-top: 2.2%;
+	margin-left: 38%;
+	position: fixed;
+	overflow: hidden;
+}
+.question_left .left_headline h2{
+	text-align: center;
+}
+
+/*说明*/
+.head_inp{
+	width: 85%;
+	height: 50px;
+	border: none;
+	font-size: 18px;
+	overflow: hidden;
+	background: white;
+	margin-left: 50px;
+}
+/*题目*/
+.left_choice{
+	width: 100%;
+	height: auto;
+}
+.choice_one{
+	width: 70%;
+	height: 20%;
+	margin-top: 1%;
+	line-height: 400%;
+}
+.left_choice:hover{
+	background: rgb(245,245,245);
+}
+.choice_one p{
+	line-height: 200%;
+}
+
+/*问卷问题区域*/
+.content{
+	width: 100%;
+	height: auto;
+	background: #00AA88;
+	margin-top: 10px;
+}
+
+.content_title{
+	width: 60%;
+	height: 60px;
+	background: yellow;
+	margin: 0 auto;
+}
+
+.content_title h3{
+	line-height: 60px;
+	text-align: center;
+}
+
+.content1{
+	width: 40%;
+	height: 40px;
+	background: #00CC00;
+	margin:20px 10%;
+}
+.content1 input[type='radio']{
+	width: 20px;
+	height: 20px;
+	position: relative;
+	top: 5px;
+	left: 5px;
+}
+.content1 label{
+	line-height: 40px;
+}
+
+.edit{
+	width: 100%;
+	height: 500px;
+	background: #00b7ee;
+}
+

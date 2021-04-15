@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>统计问卷</title>
+    <link rel="stylesheet" href="../static/home/css/s.css">
+    <link rel="icon" href="https://static.jianshukeji.com/hcode/images/favicon.ico">
+    <style>
+        /* css 代码  */
+    </style>
+    <script src="https://code.highcharts.com.cn/highcharts/highcharts.js"></script>
+    <script src="https://code.highcharts.com.cn/highcharts/highcharts-3d.js"></script>
+    <script src="https://code.highcharts.com.cn/highcharts/modules/exporting.js"></script>
+    <script src="https://img.hcharts.cn/highcharts-plugins/highcharts-zh_CN.js"></script>
+</head>
+<body>
+    <div class="box">
+        <div class="nav">
+            <a href="home/index"><img src="/static/home/images/houses.svg" alt="" style="width: 50px; height: 50px;"></a>
+            <h2>问卷访问页面</h2>
+        </div>
+        <div class="center">
+            <img class="leftbut" src="/static/home/images/lefts.svg" style="width: 50px; height: 50px;"/>
+            <img class="rightbut" src="/static/home/images/rights.svg" style="width: 50px; height: 50px;"/>
+            <div class="topic">
+                <ul>
+                    <li>第一题</li>
+                    <li>题目</li>
+                    <li>类型</li>
+                </ul>
+                <div id="container" style="min-width:400px;height:400px"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    var  chart = Highcharts.chart('container', {
+        chart: {
+            plotBackgroundColor: null,
+            plotBorderWidth: null,
+            plotShadow: false,
+            options3d: {
+                enabled: true,
+                alpha: 45,
+                beta: 0
+            }
+        },
+        title: {
+            text: '题目'
+        },
+        tooltip: {
+            headerFormat: '{series.name}<br>',
+            pointFormat: '{point.name}: <b>{point.percentage:.1f}%</b>'
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                depth: 35,
+                dataLabels: {
+                    enabled: true,
+                    format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                    style: {
+                        color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                    }
+                },
+                states: {
+                    hover: {
+                        enabled: false
+                    }
+                },
+                slicedOffset: 20,         // 突出间距
+                point: {                  // 每个扇区是数据点对象，所以事件应该写在 point 下面
+                    events: {
+                        // 鼠标滑过是，突出当前扇区
+                        mouseOver: function() {
+                            this.slice();
+                        },
+                        // 鼠标移出时，收回突出显示
+                        mouseOut: function() {
+                            this.slice();
+                        },
+                        // 默认是点击突出，这里屏蔽掉
+                        click: function() {
+                            return false;
+                        }
+                    }
+                }
+            }
+        },
+        series: [{
+            type: 'pie',
+            name: '浏览器访问量占比',
+            data: [
+                ['喜欢',   45.0],
+                ['不喜欢',   55.0]
+            ]
+        }]
+    });
+</script>

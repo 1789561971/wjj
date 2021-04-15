@@ -1,0 +1,51 @@
+<?php
+
+namespace app\home\controller;
+
+use think\Controller;
+
+class Circle extends Controller
+{
+    public function index()
+    {
+        $arr = db('home_user')->where(['front_id' => session('front.id')])->find();
+        $arrs = db('survey_info')->paginate(10);
+        return view('home@/circle/circle', compact('arr', 'arrs'));
+    }
+
+    public function detailed(){
+        $data_name = input();
+
+        $info = db('survey_info')->where('survey_name',$data_name['front_name'])->find();
+        $ques = db('question')->where('ques_sid',$info['survey_id'])->select();
+
+        $opti_data = [];
+        foreach ($ques as $key => $value){
+            $opti = db('opti')->where('opti_wid',$value['ques_id'])->select();
+            array_push($opti_data,$opti);
+        }
+        return view('/home@circle/participate',compact('data_name','info','ques','opti_data'));
+    }
+
+    public function insert(){
+        $data = input();
+        var_dump($data);
+        $answer_xid = trim($data['answer_xid']);
+        $answer_pid  = db('survey_info')->where('survey_name',$data['answer_pid'])->value('survey_id');
+
+        $answer_data = [
+            'answer_pid' => $answer_pid,
+            'answer_uid' => session('front.id'),
+            'answer_date' => date("Y-m-d")
+        ];
+        $answer_dat = [
+            'ans_id' => $answer_pid,
+            'ordtm'  => $answer_xid,
+            'an_data' => $data['stan']
+        ];
+        db('answer')->insert($answer_data);
+        db('answer_dat')->insert($answer_dat);
+    }
+
+
+}

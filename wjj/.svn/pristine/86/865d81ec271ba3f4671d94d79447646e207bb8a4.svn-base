@@ -1,0 +1,44 @@
+<?php /*a:1:{s:57:"D:\wamp64\www\wjj\application\home\view\index\create.html";i:1616463627;}*/ ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/static/home/css/cret.css" />
+    <link rel="stylesheet" href="/static/home/css/font-awesome.css">
+</head>
+<body>
+    <div class="box">
+        <div class="nav">
+           <li>问答军</li>
+            <div class="nav-right">
+                <a href="">我的问卷</a>
+                <a href="">退出登录</a>
+                <a href="">用户名称</a>
+            </div>
+        </div>
+        <div class="center">
+            <div class="center-left">
+                <button class="addwj">
+                    +  创建问卷
+                </button>
+            </div>
+            <div class="center-right">
+                <div class="lis">问卷列表</div>
+                <div class="content">
+                    <ul>
+                        <li>标题</li>
+                    </ul>
+
+                    <ul class="content-left">
+                        <li>ID:</li>
+                        <li>状态:</li>
+                        <li>答卷:</li>
+                        <li>发布日期:</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

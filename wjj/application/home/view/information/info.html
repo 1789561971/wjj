@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="/static/home/css/infoo.css">
+	<link rel="stylesheet" type="text/css" href="/static/home/css/est.css">
+	<script src="/static/home/script/est.js"></script>
+</head>
+<body>
+	
+	
+
+
+	<div class="box_info">
+		
+
+
+		<!--修改框-->
+		<div class="model-box">
+	        <div class="content">
+	            <form action="{:url('/home/information/userEdit')}" method="post">
+	                <div class="form-input">
+	                    <label>修改用户名</label>
+	                    <input type="text" name="front_name" placeholder="请输入要修改的用户名">
+	                </div>
+	                <div class="form-input" align="center">
+						<input type="submit" value="修改">
+						<input type="button" class="close" value="取消">
+	                </div>
+	            </form>
+	        </div>
+	    </div>
+
+
+	    <div class="model-box-2">
+	        <div class="contents">
+	            <form action="{:url('/home/information/passEdit')}" method="post">
+	                <div class="form-input">
+	                    <label>修改密码</label>
+	                    <input type="text" name="password" placeholder="请输入要修改的密码">
+	                </div>
+	                <div class="form-input" align="center">
+						<input type="submit" value="修改">
+						<input type="button" class="closes" value="取消">
+	                </div>
+	            </form>
+	        </div>
+	    </div>
+
+
+		<!--页头-->
+		<div class="info_head">
+			<a class="bar" href="./quit"><div class="head_w">问卷军</div></a>
+			<div class="head_bar">
+				<a class="bar_a" href="./create">我的问卷</a>
+				<a class="bar_a" href="./home">退出登录</a>
+				<div class="bar_a">用户名称:{$arr.front_name}</div>
+			</div>
+		</div>
+
+
+		<!--用户信息-->
+		<div class="info_user">
+			<div class="user_right">
+				<h3 style="margin-left: 180px;">注册信息</h3>
+				<form action="" method="post">
+					<div class="user_info">
+						<p class="user_p"><label>用户名：</label><label class="user_la">{$arr.front_name}</label><input type="button" class="user_mod1" value="修改"></p>
+						<p class="user_p"><label>账号ID：</label><label class="user_la">{$arr.front_id}</label></p>
+						<p class="user_p"><label>账号类型：</label><label class="user_la">{$arr.front_account}</label></p>
+						<p class="user_p"><label>邮件地址：</label><label class="user_la">{$arr.front_email}</label></p>
+						<p class="user_p"><label>手机号码：</label><label class="user_la">{$arr.front_phone}</label></p>
+						<p class="user_p"><label>微信：</label><label class="user_la">{$arr.front_wechat}</label></p>
+						<p class="user_p"><label>密码：</label><label class="user_la">{$arr.front_password}</label><input type="button" class="user_mod2" value="修改"></p>
+					</div>
+				</form>
+			
+			</div>
+			<div class="user_left">
+				<h3 style="margin-left: 180px;">企业信息</h3>
+				<div class="user_ext">
+					<p class="user_p"><label>公司名称：</label></p>
+					<p class="user_p"><label>企业logo：</label></p>
+					<p class="user_p"><label>自定义域名：</label></p>
+				</div>
+			</div>
+
+		</div>
+
+
+
+
+	</div>
+</body>
+</html>

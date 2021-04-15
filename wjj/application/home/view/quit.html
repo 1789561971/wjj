@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>个人用户首页</title>
+	<link rel="stylesheet" type="text/css" href="/static/webuploader/webuploader.css">
+    <link href="/static/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="/static/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" type="text/css" href="/static/admin/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="/static/home/css/quit.css"/>
+    <script src="/static/home/script/home.js"></script>
+    <script src="/static/bootstrap/js/jquery.min.js"></script>
+    <script src="/static/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="/static/Highcharts-9.0.1/code/highcharts.js"></script>
+</head>
+<body>
+<div class="home">
+	<div class="head">
+
+		<div class="logo">
+			<img src="/static/home/images/logo.jpg" width="90px" height="50px">
+		</div>
+
+		<div class="word">问答军</div>
+
+		<div class="navigation">
+			<ul>
+				<li><a href="./quit">首页</a></li>
+				<li><a href="./circle">问答圈</a></li>
+			</ul>
+		</div>
+
+		<div class="input">
+			<input type="" name="" placeholder="搜索你感兴趣的问卷">
+			<button class="but">搜索</button>
+		</div>
+
+		<div class="bott">
+			<a href="../home/information"><div class="open"><img src="/static/home/images/6.jpg" width="100px" height="40px"></div></a>
+    		<div class="opens"><a href="../home/information">{$arr.front_name}</a></div>
+		</div>
+	</div>
+	<div class="midland">
+		<div class="conts">
+				<img src="/static/home/images/1.jpg" width="50%" height="500px">
+				<div class="conts_div"><p>抖音“黑马”刘思瑶刘思瑶是最近抖音平台里大热的一位网红，作为去年抖音里的一匹“黑马”，她爆红的速度简直像开了挂</p>
+				</div>
+		</div>
+		<div class="conts_1">
+				<img src="/static/home/images/3.jpg" width="50%" height="500px">
+				<div class="conts_div_1"><p>虽说时长都很精简，但却将刘思瑶的美和特点全部展现出来了，关注她的人应该知道，她每一次都是浓妆艳抹出镜</p>
+				</div>
+		</div>
+		<div class="conts_2">
+				<img src="/static/home/images/2.jpg" width="50%" height="500px">
+				<div class="conts_div_2"><p>腿部照片让人一切尽在不言中这个问题在前不久流传出的工作照中找到了答案，失去美颜滤镜的刘思瑶从宅男女神变成路人</p>
+				</div>
+		</div>
+	</div>	
+	<div class="bottom">
+		<div class="bottom_gray">
+			<img src="/static/home/images/logo.jpg" width="90px" height="50px;">
+			<div class="phone">15984615687</div>
+			<div class="microblog">wjj@hm</div>
+			<div class="product">
+				<div>产品</div>
+					<ul>
+						<li>企业板</li>
+						<li>尊享板</li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+			</div>
+			<div class="customer">
+				<div>客户</div>
+					<ul>
+						<li>客户提示</li>
+						<li></li>
+					</ul>
+			</div>
+			<div class="support">
+				<div>支持</div>
+					<ul>
+					<li>客服中心</li>
+					<li>帮助中心</li>
+					<li>π版平台</li>
+				</ul>
+			</div>
+			<div class="team">
+				<div>团队</div>
+				<ul>
+					<li>关于我们</li>
+					<li>加入我们</li>
+					<li></li>
+				</ul>
+			</div>
+		</div>
+		<div class="black">
+			<div class="black_font">欢迎使用问答军</div>
+			<img src="/static/home/images/1.jpg" width="70px" height="40px" class="imgs">
+			<img src="/static/home/images/2.jpg" width="70px" height="40px" class="imgss">
+			<img src="/static/home/images/3.jpg" width="70px" height="40px" class="imgsss">
+		</div>
+	</div>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+//刷新验证码
+$('#vcode').click(function () {
+    var src = $(this).attr('src')+'?v='+Math.random();
+    $(this).attr('src',src);
+});
+$('#tcode').click(function () {
+    var src = $(this).attr('src')+'?t='+Math.random();
+    $(this).attr('src',src);
+});
+</script>

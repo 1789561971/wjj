@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>问卷列表</title>
+    <link rel="stylesheet" href="/static/home/css/ret.css" />
+    <link rel="stylesheet" href="/static/home/css/font-awesome.css">
+</head>
+<body>
+    <div class="box">
+        <div class="nav">
+           <li>问答军</li>
+            <div class="nav-right">
+                <a href="">我的问卷</a>
+                <a href="home/index">退出登录</a>
+                <a href="">用户名称</a>
+            </div>
+        </div>
+        <div class="center">
+            <div class="center-left">
+                <button class="addwj" >
+                    <a href="./home/choose/choose">+  创建问卷</a>
+                </button>
+            </div>
+            <div class="center-right">
+                <div class="lis">问卷列表</div>
+                <div class="content">
+                    <ul>
+                        <li>标题</li>
+                    </ul>
+
+                    <ul class="content-left">
+                        <li>ID:132</li>
+                        <li>状态:21363</li>
+                        <li>答卷:13</li>
+                        <li>发布日期:5413132</li>
+                    </ul>
+                    <div class="cen-cen">
+
+                    </div>
+                    <div class="acontent">
+                        <a href="">设计</a>
+                        <a href="">发送</a>
+                        <a href="">分析</a>
+                    </div>
+                    <div class="bcontent">
+                        <button>发布</button>
+                        <button>删除</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

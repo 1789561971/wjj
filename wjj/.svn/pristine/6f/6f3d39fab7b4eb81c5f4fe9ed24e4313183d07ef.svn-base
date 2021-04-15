@@ -1,0 +1,12 @@
+<?php
+
+
+namespace app\home\controller;
+use think\Controller;
+
+class S extends Controller
+{
+    public function index(){
+        return view('home@s');
+    }
+}

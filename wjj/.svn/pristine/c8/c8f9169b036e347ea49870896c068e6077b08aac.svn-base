@@ -1,0 +1,246 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+input{
+	outline: none;
+}
+li{
+	list-style-type: none;
+}
+a{
+	text-decoration: none;
+}
+button{
+	appearance:none;
+}
+/*主div的css*/
+.box_question{
+	width: 100%;
+	height: 965px;
+	background:rgb(245,245,245);
+}
+/*浏览条*/
+.question_top{
+	width: 100%;
+	height: 40px;
+	background: black;
+	position: fixed;
+	position: relative;
+}
+.top_i{
+	width: 8%;
+	height: 40px;
+	background: deepskyblue;
+	line-height: 40px;
+	text-align: center;
+	position: absolute;
+	float: left;
+	left: 100px;
+}
+.top_ii{
+	width: 8%;
+	height: 40px;
+	background: deepskyblue;
+	line-height: 40px;
+	text-align: center;
+	float: left;
+	position: absolute;
+	right: 100px;
+}
+.top_iii{
+	width: 8%;
+	height: 40px;
+	background: deepskyblue;
+	line-height: 40px;
+	text-align: center;
+	position: absolute;
+	right: 500px;
+}
+/*左侧导航栏*/
+.question_right{
+	width: 12%;
+	height: 600px;
+	background: white;
+	margin-left: 25%;
+	margin-top: 8%;
+	float: left;
+	position: fixed;
+}
+/*下拉框*/
+.right_sel{
+	width: 80%;
+	height: 40px;
+	margin-left: 10%;
+	border-radius: 5px;
+	margin-top: 55%;
+	appearance:none;
+	overflow: hidden;
+	font-size: 18px;
+}
+/*添加*/
+.right_inp{
+	width: 50%;
+	height: 50px;
+	margin-left: 25%;
+	margin-top: 55%;
+	border-radius: 10px;
+	font-size: 18px;
+}
+.right_inp:hover{
+	background: #00a0e9;
+	cursor: pointer;
+}
+/*右侧问卷设计内容*/
+.question_left{
+	width: 40%;
+	height: auto;
+	float: left;
+	background: white;
+	margin-top: 2.2%;
+	margin-left: 38%;
+	position: fixed;
+	overflow: hidden;
+}
+.question_left .left_headline h2{
+	text-align: center;
+}
+
+/*说明*/
+.head_inp{
+	width: 85%;
+	height: 50px;
+	border: none;
+	font-size: 18px;
+	overflow: hidden;
+	background: white;
+	margin-left: 50px;
+}
+/*题目*/
+.left_choice{
+	width: 100%;
+	height: auto;
+}
+.choice_one{
+	width: 70%;
+	height: 20%;
+	margin-top: 1%;
+	line-height: 400%;
+}
+.left_choice:hover{
+	background: rgb(245,245,245);
+}
+.choice_one p{
+	line-height: 200%;
+}
+
+/*问卷问题区域*/
+.content{
+	width: 100%;
+	height: auto;
+	margin-top: 10px;
+}
+
+.content_title{
+	width: 60%;
+	height: 60px;
+	margin: 0 auto;
+}
+
+.content_title h3{
+	line-height: 60px;
+	text-align: center;
+}
+
+.content1{
+	width: 40%;
+	height: 40px;
+	margin:20px 10%;
+}
+.content1 span{
+	font-size: 18px;
+}
+.content1 input[type='radio']{
+	width: 20px;
+	height: 20px;
+	position: relative;
+	top: 5px;
+	left: 5px;
+}
+.content1 input[type='checkbox']{
+	width: 20px;
+	height: 20px;
+	position: relative;
+	top: 5px;
+	left: 5px;
+}
+.content1  textarea{
+	font-size: 20px;
+	width: 400px;
+	position: relative;
+	top: -40px;
+	left: 20px;
+}
+.content1 label{
+	line-height: 40px;
+}
+
+.edit{
+	width: 100%;
+	height: auto;
+}
+
+.choice_hidd{
+	width: 40%;
+	height: auto;
+	margin:20px 10%;
+}
+.choice_hidd input[type='text']{
+	width: 250px;
+	height: 35px;
+	margin-top: 10px;
+}
+
+.choice_hidd span{
+	width: 20px;
+	height: 20px;
+	background: #00a0e9;
+	padding: 8px 7px;
+	border-radius: 5px;
+
+}
+.choice_hidd span:hover{
+	color: white;
+	background: black;
+	cursor:pointer;
+}
+.choice_add{
+	width: 100px;
+	height: 40px;
+	background: #00a0e9;
+	text-align: center;
+	line-height: 40px;
+	margin-left: 160px;
+	border-radius: 5px;
+}
+
+.choice_add:hover{
+	color: white;
+	/*background: #00a0e9;*/
+	cursor:pointer;
+}
+
+.choice_over{
+	width: 180px;
+	height: 50px;
+	background: #00a0e9;
+	text-align: center;
+	line-height: 50px;
+	border-radius: 5px;
+	margin: 0 auto;
+}
+.choice_over:hover{
+	color: white;
+}
+
+

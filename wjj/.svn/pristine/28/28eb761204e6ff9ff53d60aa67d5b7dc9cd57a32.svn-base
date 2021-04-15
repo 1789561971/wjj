@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>统计问卷</title>
+    <link rel="stylesheet" href="../static/home/css/statics.css">
+    <script src="https://kit.fontawesome.com/44387d7279.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="box">
+        <div class="nav">
+            <i class="fas fa-arrow-left"></i>
+            <h1>问卷访问页面</h1>
+        </div>
+    </div>
+</body>
+</html>

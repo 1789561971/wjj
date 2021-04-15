@@ -1,0 +1,23 @@
+<?php
+
+
+namespace app\home\controller;
+
+
+use think\Controller;
+
+class create extends Controller
+{
+    public function index(){
+    	$arrs=db('survey_info')->paginate(2);
+    	$arr = db('home_user')->where(['front_id' => session('front.id')])->find();
+        return view("home@/index/create",compact('arr','arrs'));
+    }
+    public function start(){
+    	$data=input();
+    	var_dump($data);
+    	$date=db('survey_info')->where('user_id',session('front.id'))->update($data);
+    	var_dump($date);
+
+    }
+}

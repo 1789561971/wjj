@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>修改</title>
+</head>
+<body>
+<div style="text-align:center;padding-bottom: 10px;">
+	<h2>修改信息</h2>
+	<a href="/admin/Useradmin/index">返回</a>
+</div>
+
+
+
+
+<form method="post" action="{:url('admin/Useradmin/mod')}">
+<table width="400" bordercolor="#ccc" border="1" rules="all" align="center" cellpadding="5">
+	<tr>
+		<td width="80" align="right">用户名称：</td>
+		<td><input type="text" name="front_name" value="{$arr.front_name}"></td>
+	</tr>
+	<tr>
+		<td width="80" align="right">用户密码：</td>
+		<td><input type="text" name="front_password" value="{$arr.front_password}"></td>
+	</tr>
+	<tr>
+		<td width="80" align="right">问卷ID：</td>
+		<td><input type="text" name="front_sid" value="{$arr.front_sid}"></td>
+	</tr>
+	<tr>
+		<td width="80" align="right">账号类型：</td>
+		<td><input type="text" name="front_account" value="{$arr.front_account}"></td>
+	</tr>
+	<tr>
+		<td width="80" align="right">邮寄地址：</td>
+		<td><input type="text" name="front_email" value="{$arr.front_email}"></td>
+	</tr>
+	<tr>
+		<td width="80" align="right">手机号码：</td>
+		<td><input type="text" name="front_phone" value="{$arr.front_phone}"></td>
+	</tr>
+	<tr>
+		<td width="80" align="right">微信：</td>
+		<td><input type="text" name="front_wechat" value="{$arr.front_wechat}"></td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td>
+			<input type="submit" value="提交">
+			<input type="hidden" name="front_id" value="{$id}" >
+			<input type="reset" value="重置">
+		</td>
+	</tr>
+</table>
+</form>
+</body>
+</html>

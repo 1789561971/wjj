@@ -1,0 +1,14 @@
+<?php
+
+
+namespace app\home\controller;
+
+
+use think\Controller;
+
+class Statics extends Controller
+{
+    public function index(){
+        return view('home@statics/statics');
+    }
+}

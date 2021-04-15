@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.box{
+    width: 100%;
+    height: 80px;
+    background: grey;
+}
+.nav{
+    width: 60px;
+    height: auto;
+    padding: 20px 50px;
+}

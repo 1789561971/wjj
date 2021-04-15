@@ -1,0 +1,13 @@
+<?php /*a:1:{s:54:"D:\wamp64\www\wjj\application\home\view\Home\home.html";i:1616380018;}*/ ?>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>首页</title>
+	<link rel="stylesheet" type="text/css" href="/public/home/home">
+</head>
+<body>
+<div class="home">
+	<div class="head"></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<?php
+
+namespace app\home\controller;
+
+use think\Controller;
+
+class Circle extends Controller
+{
+    public function index(){
+    	return view('home@/circle');
+    }
+    public function query(){
+    	
+    }
+}

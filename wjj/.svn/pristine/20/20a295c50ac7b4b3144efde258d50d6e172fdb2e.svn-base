@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>统计问卷</title>
+    <link rel="stylesheet" href="/static/home/css/stat.css">
+<!--    <link rel="icon" href="https://static.jianshukeji.com/hcode/images/favicon.ico">-->
+    <style>
+        /* css 代码  */
+    </style>
+    <script rel="stylesheet" type="text/javascript" src="/static/js/jquery.min.js"></script>
+    <script src="https://code.highcharts.com.cn/highcharts/highcharts.js"></script>
+    <script src="https://code.highcharts.com.cn/highcharts/highcharts-3d.js"></script>
+    <script src="https://code.highcharts.com.cn/highcharts/modules/exporting.js"></script>
+    <script src="https://img.hcharts.cn/highcharts-plugins/highcharts-zh_CN.js"></script>
+</head>
+<body>
+    <div class="box">
+        <div class="nav">
+            <h2><a href="/home/create/index" style="color: black;">返回</a></h2>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    window.page = 1;
+    function getUrlParam(name)
+    {
+        var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+        var r = window.location.search.substr(1).match(reg);  //匹配目标参数
+        if (r!=null) return unescape(r[2]); return null; //返回参数值
+    };
+
+
+    $(function () {
+        $.getUrlParam = function (name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) return unescape(r[2]); return null;
+        }
+        var id = getUrlParam('id');
+
+        $.ajax({
+            url: '/home/statistics/ajaxdata',
+            type: 'post',     // 请求类型，常用的有 GET 和 POST
+            data: {
+                post:page,
+                id
+            },
+            success: function(data) { // 接口调用成功回调函数console.log(data.data.ques_name);
+                console.log(data.data);
+                for(var i = 0;i<data.data.length;i++){
+                    var  chart = Highcharts.chart('container', {
+                        chart: {
+                            plotBackgroundColor: null,
+                            plotBorderWidth: null,
+                            plotShadow: false,
+                            options3d: {
+                                enabled: true,
+                                alpha: 45,
+                                beta: 0
+                            }
+                        },
+                        title: {
+                            text: '{$home_data.survey_name}'
+                        },
+                        tooltip: {
+                            headerFormat: '{series.name}<br>',
+                            pointFormat: '{point.name}: <b>{point.percentage:.1f}%</b>'
+                        },
+                        plotOptions: {
+                            pie: {
+                                allowPointSelect: true,
+                                cursor: 'pointer',
+                                depth: 35,
+                                dataLabels: {
+                                    enabled: true,
+                                    format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                                    style: {
+                                        color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                                    }
+                                },
+                                states: {
+                                    hover: {
+                                        enabled: false
+                                    }
+                                },
+                                slicedOffset: 20,         // 突出间距
+                                point: {                  // 每个扇区是数据点对象，所以事件应该写在 point 下面
+                                    events: {
+                                        // 鼠标滑过是，突出当前扇区
+                                        mouseOver: function() {
+                                            this.slice();
+                                        },
+                                        // 鼠标移出时，收回突出显示
+                                        mouseOut: function() {
+                                            this.slice();
+                                        },
+                                        // 默认是点击突出，这里屏蔽掉
+                                        click: function() {
+                                            return false;
+                                        }
+                                    }
+                                }
+                            }
+                        },
+
+                        series: [{
+                            type: 'pie',
+                            name: '投票人数百分百',
+                            data: [
+                                [data.data[i].ques_name,  data.length/data.length],
+                                [data.data[i].ques_name,   data.length/data.length],
+                            ]
+                        }]
+                    });
+                }
+
+
+            }
+        });
+    })
+
+
+</script>

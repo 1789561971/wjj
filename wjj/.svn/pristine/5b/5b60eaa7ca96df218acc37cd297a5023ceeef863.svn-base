@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>问答圈</title>
+	<link rel="stylesheet" type="text/css" href="/static/webuploader/webuploader.css">
+    <link href="/static/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="/static/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" type="text/css" href="/static/admin/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="/static/home/css/circles.css">
+    <script src="/static/bootstrap/js/jquery.min.js"></script>
+    <script src="/static/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="/static/Highcharts-9.0.1/code/highcharts.js"></script>
+
+</head>
+<style>
+	.pagination{
+		position: relative;
+		left: 48%;
+	}
+</style>
+
+<body>
+	<div class="circle">
+		<div class="head">
+			<div class="font">问答军</div>
+			<div class="navigation">
+				<div class="home"><a href="../home">首页</a></div>
+				<div class="answers"><a href="">问答圈</a></div>
+				<input type="" name="" placeholder="输入你想搜索的内容">
+				<button class="but" style="width: 70px; height: 40px;">搜索</button>
+			</div>
+			<div class="bott">
+				<a href="../home/information"><div class="open"><img src="/static/home/images/6.jpg" width="80px" height="70px"></div></a>
+				<div class="opens"><a href="../home/information">欢迎您,{$arr.front_name}</a></div>
+			</div>
+			<button class="ton" style="width:150px; height: 50px; "><a href="/home/information">进入个人</a></button>
+		</div>
+		<div class="questionnaire">
+			{foreach $arrs  as $value}
+			<div class="quest">
+				<form action="/home/circle/detailed" method="post">
+				<div class="headline">问卷标题:</div>
+				<input class="headline_name" name="front_name" value="{$value.survey_name}" type="text"/>
+				<div class="id">发布id:{$value.user_id}</div>
+
+				<div class="time">发布时间:</div>
+				<div class="time_id">{$value.inser_time}</div>
+				<div class="issuer">发布人:</div>
+				<div class="iss_id"></div>
+				<div class="sum">参与人数:</div>
+				<div class="sum_id">78</div>
+					<input type="submit" value="参与问卷" style="width: 150px; height: 60px;" id="insauen"/>
+				</form>
+			</div>
+			{/foreach}
+<!--			<script>-->
+<!--				$(function () {-->
+
+
+<!--					$('#insauen').on('click',function () {-->
+<!--						var front_name = $('.headline_name').text();-->
+
+<!--						console.log(front_name);-->
+<!--						$.ajax({-->
+<!--							type:'post',-->
+<!--							url:"/home/circle/detailed",-->
+<!--							data:{-->
+<!--								name,-->
+<!--							},-->
+<!--							datatype:'json',-->
+<!--							success:function(e){-->
+
+<!--							},-->
+<!--							error:function(){-->
+<!--								console.log('ajax执行出错，在这里处理!')-->
+<!--							}-->
+<!--						})-->
+<!--					})-->
+<!--				})-->
+<!--			</script>-->
+		</div>
+		{$arrs|raw}
+
+	</div>
+</body>
+</html>

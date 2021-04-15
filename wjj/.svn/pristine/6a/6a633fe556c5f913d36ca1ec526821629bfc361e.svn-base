@@ -1,0 +1,11 @@
+<?php
+namespace app\admin\controller;
+use think\Db;
+class Index
+{
+    public function index()
+    {
+        $arr = Db::table('admin_release')->select();
+        return view('admin@index/index',compact('arr'));
+    }
+}

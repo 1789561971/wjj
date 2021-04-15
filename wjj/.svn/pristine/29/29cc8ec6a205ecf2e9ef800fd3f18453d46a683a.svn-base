@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>问卷创建</title>
+	<link rel="stylesheet" type="text/css" href="/static/home/css/questions.css">
+	<script src="https://kit.fontawesome.com/45fc2ca879.js" crossorigin="anonymous"></script>
+	<script rel="stylesheet" type="text/javascript" src="/static/ueditors/ueditor.config.js"></script>
+	<script rel="stylesheet" type="text/javascript" src="/static/ueditors/ueditor.all.js"></script>
+</head>
+
+<body>
+	<!--主div-->
+	<div class="box_question">
+		<!--浏览条-->
+		<div class="question_top">
+			<div class="top_i"><i class="fas fa-check"></i> 完成编辑</div>
+		</div>
+		<!--左侧导航栏-->
+		<div class="question_right">
+			<form action="" method="post">
+				<!---->
+				<select class="right_sel">
+					<option value="单选">单选</option>
+					<option value="多选">多选</option>
+					<option value="填空">填空</option>
+				</select>
+
+				<input type="button" name="" value="添加" class="right_inp">
+	
+			</form>
+		</div>
+		
+		<!--右侧问卷设计内容-->
+		<div class="question_left" >
+			<div class="left_headline">
+				<h2>????</h2>
+				<input type="text" name="" value="" class="head_inp" placeholder="添加问卷说明" disabled="">
+			</div>
+			<br>
+			<hr/>
+			<div class="content">
+				<div class="content_title">
+					<h3>1.你觉得龚文森帅吗？</h3>
+				</div>
+				<div class="content1">
+					<label>1.<span>帅</span><input type="radio" name="item"/></label>
+				</div>
+				<div class="content1">
+					<label>2.<span>很帅</span><input type="radio" name="item"/></label>
+				</div>
+				<div class="content1">
+					<label>2.<span>很帅</span><input type="radio" name="item"/></label>
+				</div>
+			</div>
+
+			<div class="edit">
+				<form>
+					<script id="container" name="content" type="text/plain"></script>
+				</form>
+				<!-- 实例化编辑器 -->
+				<script type="text/javascript">
+					var ue = UE.getEditor('container',{
+						toolbars:[['fullscreen', 'source', 'undo', 'redo', 'bold','bold', 'italic', 'underline', 'fontborder', 'strikethrough', 'superscript', 'subscript', 'removeformat', 'formatmatch', 'autotypeset', 'blockquote', 'pasteplain', '|', 'forecolor', 'backcolor', 'insertorderedlist', 'insertunorderedlist', 'selectall', 'cleardoc'],],
+					});
+						ue.ready(function () {
+					})
+				</script>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+</body>
+</html>

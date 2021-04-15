@@ -1,0 +1,216 @@
+*{
+	padding: 0px;
+	margin: 0px;
+}
+.circle{
+	width: 100%;
+	height: atuo;
+	/*background: yellow;*/
+}
+.head{
+	position: relative;
+	width: 100%;
+	height: 100px;
+	background: orange;
+}
+.font{
+	position: absolute;
+	font-size: 40px;
+	font-family: 楷体;
+	left: 250px;
+	line-height: 100px;
+}
+.navigation{
+	position: absolute;
+	width: 600px;
+	height: 70px;
+	border:3px solid black;
+	left: 600px;
+	top: 15px;
+	border-radius: 10px;
+}
+.home{
+	position: absolute;
+	font-size: 30px;
+	font-family: 楷体;
+	left: 20px;
+	line-height: 70px;
+}
+a{
+	text-decoration: none;
+	color: black;
+}
+a:hover{
+	text-decoration: none;
+	color: red;
+}
+.answers{
+	position: absolute;
+	font-size: 30px;
+	font-family: 楷体;
+	left: 100px;
+	line-height: 70px;
+}
+.navigation input{
+	position: absolute;
+	width: 250px;
+	height: 40px;
+	left: 250px;
+	top: 15px;
+	font-family: 楷体;
+	border-radius: 10px;
+	outline:medium;
+}
+.but{
+	position: absolute;
+	left:510px;
+	font-size: 25px;
+	font-family: 楷体;
+	top: 15px;
+}
+.ton{
+	position: absolute;
+	right:30px;
+	font-size: 30px;
+	font-family: 楷体;
+	border-radius: 10px;
+	outline:medium;
+	top: 25px;
+}
+.bott{
+	width: 350px;
+	height: 60px;
+	position: absolute;
+	top: 20px;
+	right: 200px;
+}
+.opens{
+	position: absolute;
+	right: 80px;
+	font-family: 楷体;
+	font-size: 25px;
+	top: 15px;
+}
+
+.questionnaire{
+	position: relative;
+	width: 100%;
+	height: 769px;
+	overflow-x: hidden;
+    overflow-y: scroll;
+
+}
+.quest{
+	width: 50%;
+	height: 300px;
+	margin-top: 20px;
+	border:2px solid black;
+	margin-left: 25%;
+}
+.headline{
+	width: 250px;
+	font-family: 楷体;
+	font-size: 30px;
+	margin-top: 30px;
+	margin-left: 10px;
+	display: block; /* 要变成块级元素才可以*/
+	overflow:  hidden; /* 自动隐藏文字 */
+	white-space: nowrap; /* 强制不换行 */
+	text-overflow: ellipsis; /* 文字隐藏后添加省略号 */
+}
+.headline_name {
+	width: 100px;
+	font-family: 楷体;
+	font-size: 30px;
+	margin-top: -40px;
+	margin-left: 150px;
+	display: block; /* 要变成块级元素才可以*/
+	overflow:  hidden; /* 自动隐藏文字 */
+	white-space: nowrap; /* 强制不换行 */
+	text-overflow: ellipsis; /* 文字隐藏后添加省略号 */
+	border: none;
+
+}
+.id{
+	font-family: 楷体;
+	font-size: 25px;
+	margin-left: 280px;
+	margin-top: -35px;
+}
+.idd{
+	font-family: 楷体;
+	font-size: 25px;
+	margin-left: 390px;
+	margin-top: -35px;
+}
+.time{
+	font-family: 楷体;
+	font-size: 25px;
+	margin-left: 400px;
+	margin-top: -35px;
+}
+.time_id{
+	font-family: 楷体;
+	font-size: 18px;
+	margin-left: 530px;
+	margin-top: -28px;
+}
+.issuer{
+	font-family: 楷体;
+	font-size: 25px;
+	margin-left: 730px;
+	margin-top: -30px;
+}
+.iss_id{
+	font-family: 楷体;
+	font-size: 25px;
+	margin-left: 850px;
+	margin-top: -35px;
+}
+.quest a{
+	font-size: 40px;
+	font-family: 楷体;
+	position: absolute;
+	top: 260px;
+	left: 490px;
+}
+.sum{;
+	font-family: 楷体;
+	font-size: 25px;
+	margin-left: 600px;
+	margin-top:160px;
+}
+.sum_id{
+	font-family: 楷体;
+	font-size: 25px;
+	margin-left: 715px;
+	margin-top: -32px;
+}
+#insauen{
+	font-family: 楷体;
+	font-size: 25px;
+	position: absolute;
+	margin-left: 780px;
+	margin-top:-50px;
+}
+
+
+.bottom{
+	margin-bottom: 0px;
+	width: 100%;
+	height: 100px;
+	background: black;
+}
+.logo{
+	position: absolute;
+	width: 200px;
+	height: 80px;
+	left: 150px;
+	top: 880px;
+}
+.phone{
+	color: gray;
+}
+.microblog{
+	color: gray;
+}

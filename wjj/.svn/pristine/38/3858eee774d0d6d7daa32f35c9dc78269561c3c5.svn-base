@@ -1,0 +1,252 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+.box_info{
+	width:100%;
+	height: 950px;
+	background: rgb(245,245,245); 
+}
+/*页头*/
+.info_head{
+	width: 100%;
+	height: 70px;
+	background: white;
+	margin-top: 120px;
+}
+.head_w{
+	width: 9%;
+	height: 50px;
+	border: 1px solid black;
+	text-align: center;
+	line-height: 50px;
+	margin-left: 10%;
+	margin-top: 10px;
+	float: left;
+}
+.head_bar{
+	width: 35%;
+	height: 60px;
+	float: left;
+	margin-left: 45%;
+}
+.bar_a{
+	width: 25%;
+	height: 50px;
+	border: 1px solid black;
+	float: left;
+	text-align: center;
+	line-height: 50px;
+	margin-left: 3%;
+	margin-top: 10px;
+	text-decoration: none;
+	color: black;
+}
+.bar_a:hover{
+	background: deepskyblue;
+	cursor: pointer;
+}
+.head_w:hover{
+	background: deepskyblue;
+	cursor: pointer;
+}
+/*用户信息*/
+.info_user{
+	width: 74%;
+	height: 550px;
+	background: white;
+	margin-left: 13%;
+	margin-top: 60px;
+}
+.user_right{
+	width: 50%;
+	height: 90%;
+	float: left;
+	margin-top: 31px;
+}
+.user_left{
+	width: 50%;
+	height: 90%;
+	float: left;
+	margin-top: 31px;
+}
+.user_info{
+	width: 80%;
+	height: 90%;
+	/*border: 1px solid black;*/
+	margin-left: 10%;
+}
+.user_ext{
+	width: 80%;
+	height: 90%;
+	/*border: 1px solid black;*/
+	margin-left: 10%;
+}
+.user_p{
+	color: rgb(140,140,140);
+	font-size: 15px;
+	font-family: '微软雅黑';
+	margin-left: 8%;
+	margin-top: 28px;
+}
+.user_la{
+	color: black;
+}
+/*账户信息*/
+.info_acc{
+	width: 74%;
+	height: 350px;
+	background: white;
+	margin-left: 13%;
+	margin-top: 1%;
+}
+/*现金账户金额*/
+.acc_cash{
+	width: 25%;
+	height: 100%;
+	float: left;
+}
+.cash_xi{
+	text-align: center;
+	font-size: 19px;
+	color: grey;
+	line-height: 80px;
+}
+.cash_elem{
+	text-align: center;
+	font-size: 40px;
+	line-height: 100px;
+}
+.cash_up{
+	width: 60%;
+	height: 40px;
+	background: rgb(0,149,255);
+	color: white;
+	text-align: center;
+	font-size: 20px;
+	line-height: 40px;
+	margin-left: 20%;
+	margin-top: 45px;
+}
+.cash_up:hover{
+	background: rgb(0,134,230);
+	cursor: pointer;
+}
+.cash_a{
+	margin-left: 40%;
+	font-size: 15px;
+	color: black;
+	position: relative;
+	top:15px;
+}
+/*可发送短信数*/
+.acc_note{
+	width: 25%;
+	height: 100%;
+	float: left;
+}
+.note_num{
+	text-align: center;
+	font-size: 19px;
+	color: grey;
+	line-height: 80px;
+}
+.note_art{
+	text-align: center;
+	font-size: 40px;
+	line-height: 100px;
+}
+.note_up{
+	width: 60%;
+	height: 40px;
+	background: rgb(0,149,255);
+	color: white;
+	text-align: center;
+	font-size: 20px;
+	line-height: 40px;
+	margin-left: 20%;
+	margin-top: 45px;
+}
+.note_up:hover{
+	background: rgb(0,134,230);
+	cursor: pointer;
+}
+.note_a{
+	margin-left: 30%;
+	font-size: 15px;
+	color: black;
+	position: relative;
+	top:15px;
+}
+.note_b{
+	margin-left: 5%;
+	font-size: 15px;
+	color: deepskyblue;
+	position: relative;
+	top:15px;
+}
+
+/*红包账户金额*/
+.acc_packet{
+	width: 25%;
+	height: 100%;
+	float: left;
+}
+.packet_gift{
+	text-align: center;
+	font-size: 19px;
+	color: grey;
+	line-height: 80px;
+}
+.packet_elem{
+	text-align: center;
+	font-size: 40px;
+	line-height: 100px;
+}
+.packet_a{
+	margin-left: 42%;
+	position: relative;
+	top:55px;
+	font-size: 15px;
+	color: black;
+}
+/*问卷星实验室*/
+.acc_lab{
+	width: 25%;
+	height: 100%;
+	float: left;
+}
+.lab_xi{
+	text-align: center;
+	font-size: 19px;
+	color: grey;
+	line-height: 80px;
+}
+.lab_enter{
+	width: 60%;
+	height: 40px;
+	background: rgb(0,149,255);
+	color: white;
+	text-align: center;
+	font-size: 20px;
+	line-height: 40px;
+	margin-left: 20%;
+	margin-top: 155px;
+}
+.lab_enter:hover{
+	background: rgb(0,134,230);
+	cursor: pointer;
+}
+/*修改按钮*/
+.user_mod1{
+	background: deepskyblue;
+	width: 10%;
+	border: 1px solid black;
+	margin-left: 10%;
+}
+.user_mod2{
+	background: deepskyblue;
+	width: 10%;
+	border: 1px solid black;
+	margin-left: 10%;
+}

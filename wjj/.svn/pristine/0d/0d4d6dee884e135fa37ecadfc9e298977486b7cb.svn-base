@@ -1,0 +1,90 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+.box_choose{
+	width:100%;
+	height: 950px;
+	background: rgb(245,245,245); 
+}
+/*页头*/
+.choose_head{
+	width: 100%;
+	height: 70px;
+	background: white;
+}
+.head_w{
+	width: 9%;
+	height: 50px;
+	border: 1px solid black;
+	text-align: center;
+	line-height: 50px;
+	margin-left: 10%;
+	margin-top: 10px;
+	float: left;
+}
+.head_bar{
+	width: 35%;
+	height: 60px;
+	float: left;
+	margin-left: 45%;
+}
+.bar_a{
+	width: 25%;
+	height: 50px;
+	border: 1px solid black;
+	float: left;
+	text-align: center;
+	line-height: 50px;
+	margin-left: 3%;
+	margin-top: 10px;
+	text-decoration: none;
+	color: black;
+}
+.bar_a:hover{
+	background: deepskyblue;
+	cursor: pointer;
+}
+.head_w:hover{
+	background: deepskyblue;
+	cursor: pointer;
+}
+
+/*创建列表*/
+.choose_list{
+	width: 68%;
+	height: 630px;
+	/*background: white;*/
+	margin-left: 16%;
+	margin-top: 60px;
+}
+/*调查*/
+.list_inquiry{
+	width: 25%;
+	height: 280px;
+	background: white;
+}
+.inquiry_img{
+	margin-top: 12%;
+}
+.inquiry_char{
+	margin-top: 5%;
+}
+.inquiry_p{
+	color: grey;
+	font-size: 13px;
+}
+.inquiry_char:hover{
+	color: grey;
+}
+/*创建按钮*/
+.establish{
+	width: 90%;
+	height: 80px;
+	background: rgb(240,249,255);
+	line-height: 80px;
+	font-size: 25px;
+	font-weight: bold;
+	color: rgb(0,149,255);
+	margin-top: -10px;
+}

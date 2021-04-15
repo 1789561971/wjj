@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>问卷创建</title>
+	<link rel="stylesheet" type="text/css" href="/static/home/css/question.css">
+	<script src="https://kit.fontawesome.com/45fc2ca879.js" crossorigin="anonymous"></script>
+	<script rel="stylesheet" type="text/javascript" src="/static/ueditors/ueditor.config.js"></script>
+	<script rel="stylesheet" type="text/javascript" src="/static/ueditors/ueditor.all.js"></script>
+	<script rel="stylesheet" type="text/javascript" src="/static/js/jquery.min.js"></script>
+</head>
+
+<body>
+	<!--主div-->
+	<div class="box_question">
+		<!--浏览条-->
+		<div class="question_top">
+			<div class="top_i">返回首页</div>
+			<div class="top_ii">返回个人</div>
+			<div class="top_iii">完成编辑</div>
+		</div>
+		<!--左侧导航栏-->
+		<div class="question_right">
+			<form action="" method="post">
+				<!---->
+				<select class="right_sel" onblur="subtype(this.value)">
+					<option value="单选">单选</option>
+					<option value="多选">多选</option>
+					<option value="填空">填空</option>
+				</select>
+
+				<input type="submit" name="" value="添加" class="right_inp" >
+	
+			</form>
+		</div>
+		
+		<!--右侧问卷设计内容-->
+		<div class="question_left" >
+			<div class="left_headline" id="question_left">
+				<h2>????</h2>
+				<input type="text" name="" value="" class="head_inp" placeholder="添加问卷说明" disabled="">
+			</div>
+
+
+		</div>
+	</div>
+</body>
+</html>
+<!-- 实例化编辑器 -->
+<script type="text/javascript">
+
+
+	/*选择问题类型函数*/
+	function subtype(data){
+		var maxdiv = document.getElementById("question_left");
+		var br = document.createElement("br");
+		var hr = document.createElement("hr");
+		maxdiv.appendChild(br);
+		maxdiv.appendChild(hr);
+		var count = 0;
+		if(data === '单选'){
+			data = 'radio';
+			if(count == 0){
+				addradio(data);
+			}else{
+
+			}
+		}else if(data === '多选'){
+			data = 'checkbox';
+		}else{
+
+		}
+
+	}
+
+
+	function addradio(data){
+		var maxdiv = document.getElementById("question_left");
+		var sums = 1;
+		//创建题目最大的div并设置id，class
+		var div1 = document.createElement("div");
+
+		div1.className = 'content';
+		div1.id = 'div1';
+		maxdiv.appendChild(div1);
+		//创建问题div并设置id，class
+		var div2 = document.createElement("div");
+		var maxdiv1 = document.getElementById("div1");
+		div2.className = 'content_title';
+		div2.id = 'div2';
+		maxdiv1.appendChild(div2);
+		//创建问题的h3标签并设置id，class
+		var hhh = document.createElement("h3");
+		var maxdiv2 = document.getElementById("div2");
+		hhh.innerText = sums+'.你觉得龚文森帅吗？';
+		hhh.id = 'hhh';
+		maxdiv2.appendChild(hhh);
+		//创建选项按钮并设置id，class
+		var div3 = document.createElement("div");
+		var div4 = document.createElement("div");
+		var label1 = document.createElement("label");
+		var label2 = document.createElement("label");
+		var span1 = document.createElement("span");
+		var span2 = document.createElement("span");
+		var input1 = document.createElement("input");
+		var input2 = document.createElement("input");
+		var sum = 2;
+		div3.className = 'content1';
+		div3.id = 'div3';
+		div4.className = 'content1';
+		div4.id = 'div4';
+		maxdiv.appendChild(div3);
+		maxdiv.appendChild(div4);
+		var mindiv1 = document.getElementById("div3");
+		var mindiv2 = document.getElementById("div4");
+		mindiv1.appendChild(label1);
+		mindiv2.appendChild(label2);
+		label1.innerText = '1.';
+		label2.innerText = '2.';
+		label1.id = 'label1';
+		label2.id = 'label2';
+		var minlabel1 = document.getElementById("label1");
+		var minlabel2 = document.getElementById("label2");
+		minlabel1.appendChild(span1);
+		minlabel2.appendChild(span2);
+		span1.innerText = '帅';
+		span2.innerText = '很帅';
+		minlabel1.appendChild(input1);
+		minlabel2.appendChild(input2);
+		input1.type = data;
+		input2.type = data;
+		input1.name = "item";
+		input2.name = "item";
+		sum++;
+		sums++;
+
+		//创建题目菜单
+		var div5 = document.createElement("div");
+		div5.id = 'div5';
+		div5.className  = 'edit';
+		maxdiv.appendChild(div5);
+		var from1 = document.createElement("from");
+		var maxdiv3 = document.getElementById('div5');
+		from1.id = 'frome1';
+		maxdiv3.appendChild(from1);
+		var srcipt1 = document.createElement("script");
+		srcipt1.id = 'container';
+		srcipt1.name = 'content';
+		srcipt1.type = 'text/plain';
+		srcipt1.innerText = '请输入题目';
+		var froms = document.getElementById('frome1');
+		froms.appendChild(srcipt1);
+		var cjtitle = srcipt1.innerText;
+		console.log(cjtitle);
+		var objdata = show(cjtitle);
+		console.log(show);
+		var ohoh = document.getElementById("hhh");
+
+		ohoh.innerText = '<?php  ?>';
+		var div6 = document.createElement("div");
+		div6.className = 'choice_hidd';
+		div6.id = 'div6';
+		div5.appendChild(div6);
+		var div7 = document.createElement("div");
+		var div8 = document.createElement("div");
+		var mindiv3 = document.getElementById('div6');
+		div7.id = 'div7';
+		div8.id = 'div8';
+		mindiv3.appendChild(div7);
+		mindiv3.appendChild(div8);
+		var input3 = document.createElement("input");
+		var input4 = document.createElement("input");
+		input3.type = 'text';
+		input3.value = '选择1';
+		input4.type = 'text';
+		input4.value = '选择2';
+		var span3 = document.createElement("span");
+		var span4 = document.createElement("span");
+		span3.innerText = '删除';
+		span4.innerText = '删除';
+		var mindiv4 = document.getElementById('div7');
+		var mindiv5 = document.getElementById('div8');
+		mindiv4.appendChild(input3);
+		mindiv4.appendChild(span3);
+		mindiv5.appendChild(input4);
+		mindiv5.appendChild(span4);
+
+		var div9 = document.createElement("div");
+		var div10 = document.createElement("div");
+		div9.className = 'choice_add';
+		div9.innerText = '增加';
+		div10.className = 'choice_over';
+		div10.innerText = '完成';
+
+		maxdiv3.appendChild(div9);
+		maxdiv3.appendChild(div10);
+	};
+	function addradir_errn(){
+
+	}
+
+
+
+	function show(title) {
+		var ue = UE.getEditor('container',{
+			toolbars:[['fullscreen', 'source', 'undo', 'redo','bold', 'italic', 'underline', 'fontborder', 'strikethrough', 'superscript', 'subscript', 'removeformat', 'formatmatch', 'autotypeset', 'blockquote', 'pasteplain', '|', 'forecolor', 'backcolor', 'insertorderedlist', 'insertunorderedlist', 'selectall', 'cleardoc'],],
+		});
+		ue.ready(function () {
+			ue.addListener("blur",function(){
+				var datatext = ue.getContentTxt();
+
+			})
+	})
+
+	}
+</script>

@@ -1,0 +1,15 @@
+$(function(){
+	$('.establish').css('display','none');
+	// 调查
+	$('.list_inquiry').on('mouseout',function(){
+		$('.establish').css('display','none');
+		$('.inquiry_p').css('display','block');
+		
+	})
+	$('.list_inquiry').on('mouseover',function(){
+		$('.establish').css('display','block');
+		$('.inquiry_p').css('display','none');
+	})
+
+	
+})

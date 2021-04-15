@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>问答圈</title>
+	<link rel="stylesheet" type="text/css" href="/static/webuploader/webuploader.css">
+    <link href="/static/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="/static/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" type="text/css" href="/static/admin/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="/static/home/css/circles.css">
+    <script src="/static/bootstrap/js/jquery.min.js"></script>
+    <script src="/static/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="/static/Highcharts-9.0.1/code/highcharts.js"></script>
+</head>
+<body>
+	<div class="circle">
+		<div class="head">
+			<div class="font">问答军</div>
+			<div class="navigation">
+				<div class="home"><a href="./home">首页</a></div>
+				<div class="answers"><a href="./circle">问答圈</a></div>
+				<input type="" name="" placeholder="输入你想搜索的内容">
+				<button class="but" style="width: 70px; height: 40px;">搜索</button>
+				<button class="ton" style="width:150px; height: 50px; "><a href="/admin/Index/index">进入后台</a></button>
+			</div>
+		</div>
+		<div class="questionnaire">
+			<div class="quest">
+				<div class="headline">问卷标题</div>
+				<div class="id">发布id:</div>
+				<div class="idd">77</div>
+				<div class="time">发布时间:</div>
+				<div class="time_id">2021/3/24</div>
+				<div class="issuer">发布人:</div>
+				<div class="iss_id">纹身</div>
+				<a href="#">举报</a>
+				<div class="sum">参与人数:</div>
+				<div class="sum_id">78</div>
+				<button style="width: 150px; height: 60px;">参与问卷</button>
+			</div>
+			<div class="quest"></div>
+			<div class="quest"></div>
+			<div class="quest"></div>
+			<div class="quest"></div>
+		</div>
+		<div class="bottom">
+			<div class="logo">
+				<img src="/static/home/images/logo.jpg" width="90px"; height="50px";>
+				<div class="phone">15984615687</div>
+				<div class="microblog">wjj@hm</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

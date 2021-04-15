@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.box{
+    width: 100%;
+    height: auto;
+    position: absolute;
+}
+.box .nav{
+    position: relative;
+    display: flex;
+    justify-items: right;
+}
+.box .nav li{
+    width: 100%;
+    height: auto;
+    font-size: 30px;
+    position: relative;
+    top: 40px;
+    left: 50px;
+    list-style: none;
+    border-bottom: pink 1px solid;
+
+}
+.box .nav-right{
+    position: relative;
+    top: 40px;
+    width: 25%;
+    font-size: 23px;
+    margin-right: 200px;
+    line-height: 37px;
+    border-bottom: pink 1px solid;
+}
+a{
+    text-decoration: none;
+    color: #2b908f;
+}
+.box .center{
+    position: relative;
+    width: 100%;
+    height: auto;
+    top: 100px;
+}
+.box .center >div{
+    float: left;
+}
+.box .center .center-left
+{
+    position: relative;
+    left: 50px;
+    width: 20%;
+    height: 700px;
+    border: 1px solid #808083;
+}
+.box .center .center-left button{
+    width: 70%;
+    height: 10%;
+    font-size: 30px;
+    background: #00CCFF;
+    margin: 10% 13%;
+}
+.box .center .center-right
+{
+    position: relative;
+    left: 3%;
+    width: 75%;
+    height: 700px;
+    border: 1px solid #808083;
+}
+.box .center .center-right .lis{
+    width: 20%;
+    height: 10%;
+    font-size: 30px;
+    border: 1px solid #808083;
+    text-align: center;
+    line-height: 70px;
+    margin: 20px 40%;
+}
+.box .center .center-right .content{
+    width: 80%;
+    height: 30%;
+    margin-left: 10%;
+    border: 1px solid #808083;
+}
+.box .center .center-right .content li{
+    list-style: none;
+    position: relative;
+    top: 25px;
+    font-size: 30px;
+    left: 5%;
+    float: left;
+}
+.box .center .center-right .content .content-left
+{
+    margin-left: 50%;
+}
+.box .center .center-right .content .content-left li{
+    padding-right: 5%;
+    font-size: 20px;
+}
+.box .center .cen-cen{
+    position: relative;
+    top: 70px;
+    width: 90%;
+    height: 70px;
+    margin:auto;
+}
+.box .center .center-right .content .acontent{
+    position: relative;
+    top: 52%;
+    left: 5%;
+    width: 35%;
+    line-height: 20px;
+}
+.box .center .center-right .content .acontent a{
+    padding-right: 15%;
+}
+.box .center .center-right .content .bcontent{
+    position: relative;
+    top: 30%;
+    left: 72%;
+    width: 30%;
+    height: 20%;
+}
+.box .center .center-right .content .bcontent button{
+    width: 30%;
+    height: 100%;
+    margin-right: 10%;
+}

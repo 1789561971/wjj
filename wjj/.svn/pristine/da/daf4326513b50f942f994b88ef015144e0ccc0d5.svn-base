@@ -1,0 +1,82 @@
+$(function(){
+	$('.establish').css('display','none');
+	
+	$('.establish2').css('display','none');
+	$('.establish3').css('display','none');
+	$('.establish4').css('display','none');
+	$('.establish5').css('display','none');
+	// 调查
+	$('.list_inquiry').on('mouseout',function(){
+		$('.establish').css('display','none');
+		$('.inquiry_p').css('display','block');
+		
+	})
+	$('.list_inquiry').on('mouseover',function(){
+		$('.establish').css('display','block');
+		$('.inquiry_p').css('display','none');
+	})
+
+	// 考试
+	$('.establish1').css('display','none');
+	$('.list_exam').on('mouseout',function(){
+		$('.establish1').css('display','none');
+		$('.exam_p').css('display','block');
+	})
+	$('.list_exam').on('mouseover',function(){
+		$('.establish1').css('display','block');
+		$('.exam_p').css('display','none');
+	})
+
+
+	// 投票
+	$('.list_vote').on('mouseout',function(){
+		$('.establish2').css('display','none');
+		$('.vote_p').css('display','block');
+	})
+	$('.list_vote').on('mouseover',function(){
+		$('.establish2').css('display','block');
+		$('.vote_p').css('display','none');
+	})
+
+	// 表单
+	$('.list_form').on('mouseout',function(){
+		$('.establish3').css('display','none');
+		$('.form_p').css('display','block');
+		$('.form_pi').css('display','block');
+	})
+	$('.list_form').on('mouseover',function(){
+		$('.establish3').css('display','block');
+		$('.form_p').css('display','none');
+		$('.form_pi').css('display','none');
+	})
+
+
+	// 360度评估
+	$('.list_assess').on('mouseout',function(){
+		$('.establish4').css('display','none');
+		$('.assess_p').css('display','block');
+		$('.assess_pi').css('display','block');
+	})
+	$('.list_assess').on('mouseover',function(){
+		$('.establish4').css('display','block');
+		$('.assess_p').css('display','none');
+		$('.assess_pi').css('display','none');
+	})
+
+
+	// 测评
+	$('.list_eval').on('mouseout',function(){
+		$('.establish5').css('display','none');
+		$('.eval_p').css('display','block');
+	})
+	$('.list_eval').on('mouseover',function(){
+		$('.establish5').css('display','block');
+		$('.eval_p').css('display','none');
+	})
+
+
+	
+
+
+
+})

@@ -1,0 +1,14 @@
+<?php
+
+namespace app\home\controller;
+
+use think\Controller;
+
+class Choose extends Controller
+{
+    //调用创建问卷视图
+    public function index()
+    {
+    	return view('home@choose/choose');
+    }
+}

@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.box{
+    width: 100%;
+    height: auto;
+    position: absolute;
+}
+.box .nav{
+    position: relative;
+    width: 100%;
+    background:#d3d6da;
+    border-bottom: #808080 1px solid;
+}
+.box .nav img{
+    position: relative;
+    top: 20px;
+    left: 190px;
+}
+.box .nav  h2{
+    position: relative;
+    width: 200px;
+    top: -25px;
+    left: 42%;
+}
+.box .center{
+    width: 80%;
+    height: 600px;
+    margin: auto;
+    margin-top: 100px;
+    background: #ececec;
+}
+.box .center .leftbut{
+    position: relative;
+    top: 50%;
+    left: 1%;
+}
+.box .center .rightbut{
+    position: relative;
+    top: 50%;
+    left: 90%;
+}
+.box .center .topic{
+    width: 80%;
+    height: 600px;
+    margin:40px auto;
+}
+.box .center .topic ul li {
+    float: left;
+    list-style: none;
+    font-size: 28px;
+    padding: 20px 20px;
+    margin-left: 230px;
+}
+

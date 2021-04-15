@@ -1,0 +1,61 @@
+<?php /*a:1:{s:58:"D:\wamp64\www\wjj\application\home\view\choose\choose.html";i:1617063603;}*/ ?>
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="/static/home/css/chooses.css">
+	<link rel="stylesheet" type="text/css" href="/static/home/css/est.css">
+	<script src="/static/js/jquery.min.js"></script>
+	<script type="text/javascript" src="/static/home/script/chooses.js"></script>
+    <script src="/static/home/script/ests.js"></script>
+</head>
+<body>
+	<div class="box_choose">
+		<!--页头-->
+		<div class="choose_head">
+			<div class="head_w">问卷军</div>
+			<div class="head_bar">
+				<a class="bar_a" href="./create">我的问卷</a>
+				<a class="bar_a" href="./home">退出登录</a>
+				<div class="bar_a">用户名称:<?php echo htmlentities($arr['front_name']); ?></div>
+			</div>
+		</div>
+		
+
+		<!--创建框-->
+		<div class="model-box">
+	        <div class="content">
+	            <form action="<?php echo url('/home/choose/jud'); ?>" method="post">
+	                <div class="form-input">
+	                    <label>创建调查问卷</label>
+	                    <input type="text" name="sname" placeholder="请输入标题">
+	                </div>
+	                <div class="form-input" align="center">
+						<input type="submit" value="立即创建">
+						<input type="button" class="close" name="" value="取消">
+						<!-- <button class="close"><a href="./choose/index">取消</a></button> -->
+	                </div>
+	            </form>
+	        </div>
+	    </div>
+
+		
+		<!--创建列表-->
+		<div class="choose_list" align="center">
+			<div class="list_inquiry">
+				<img src="/static/home/images/choose/1.png" class="inquiry_img">
+				<h3 style="margin-top: 4%;">调查</h3>
+				<div class="inquiry_char">
+					<p class="inquiry_p">丰富题型，强大逻辑</p>
+					<p class="inquiry_p">问卷密码，红包抽奖</p>
+				</div>
+				<div class="establish"><a>创建</a></div>
+			</div>
+
+		</div>
+
+
+
+	</div>
+</body>
+</html>

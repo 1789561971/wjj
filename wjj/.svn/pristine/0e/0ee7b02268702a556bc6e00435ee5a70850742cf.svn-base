@@ -1,0 +1,475 @@
+*{
+	padding: 0px;
+	margin: 0px;
+}
+.home{
+	width: 100%;
+	height: 1000px;
+	position: relative;
+}
+.head{
+	width: 100%;
+	height: 70px;
+	background: white;
+	position: relative;
+	top:0px;
+}
+.logo{
+	position:absolute;
+	left: 10%;
+	top: 10px;
+}
+.word{
+	position: absolute;
+	left:20%;
+	top:15px;
+	font-size: 30px;
+	letter-spacing: 5px;
+	font-family: 楷体;
+}
+.navigation{
+	position: absolute;
+	left: 30%;
+	font-size: 30px;
+}
+.navigation a{
+	text-decoration: none;
+	color: black;
+	font-family: 楷体;
+}
+.navigation ul{
+	list-style: none;
+}
+.navigation ul li{
+	float: left;
+	margin: 15px 50px;
+}
+.navigation a:hover{
+	color: red;
+}
+.input{
+	position: absolute;
+	left: 50%;
+	top: 15px;
+	font-family: 楷体;
+
+}
+.input input{
+	width: 500px;
+	height: 50px;
+	padding-left: 10px;
+	font-size: 18px;
+}
+.input .but{
+	width: 100px;
+	height: 50px;
+}
+.midland{
+	width: 100%;
+	height: auto;
+}
+button {
+    /* 取消按钮自带的轮廓 */
+    outline: 0;
+    width: 100px;
+    height: 40px;
+    color: #409eff;
+    /* 圆角属性 */
+    border-radius: 4px;
+    border: 1px solid #b3d8ff;
+    background-color: #ecf5ff;
+    /* 过渡 */
+    transition: all 0.3s;
+    /* 鼠标变小手 */
+    cursor: pointer;
+}
+
+button:hover {
+    color: #fff;
+    border-color: #409eff;
+    background-color: #409eff;
+}
+
+.model-box {
+    /* 隐藏模态框 */
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200vh;
+    background-color: rgba(0, 0, 0, 0.45);
+    z-index: 20;
+}
+
+.model-box-2 {
+    /* 隐藏模态框 */
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.45);
+    z-index: 20;
+}
+
+.model-box .content {
+    position: absolute;
+    top: 100px;
+    /* calc方法可以自动计算数值 */
+    left: calc(50% - 210px);
+    width: 420px;
+    height: 430px;
+    border-radius: 5px;
+    padding: 0 20px;
+    /* 盒子阴影 */
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+}
+
+.model-box-2 .contents {
+    position: absolute;
+    top: 100px;
+    /* calc方法可以自动计算数值 */
+    left: calc(50% - 210px);
+    width: 420px;
+    height: 450px;
+    border-radius: 5px;
+    padding: 0 20px;
+    /* 盒子阴影 */
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+}
+
+.model-box .content .title {
+    /* 弹性布局 */
+    display: flex;
+    /* 让子元素水平与两端对齐 */
+    justify-content: space-between;
+    height: 60px;
+    line-height: 60px;
+    /* 鼠标移入呈现移动光标 */
+    cursor: move;
+}
+
+.model-box-2 .contents .titles {
+    /* 弹性布局 */
+    display: flex;
+    /* 让子元素水平与两端对齐 */
+    justify-content: space-between;
+    height: 60px;
+    line-height: 60px;
+    /* 鼠标移入呈现移动光标 */
+    cursor: move;
+}
+
+.model-box .content .title span {
+    font-size: 18px;
+    color: #333;
+}
+
+.model-box-2 .contents .titles span {
+    font-size: 18px;
+    color: #333;
+}
+
+.model-box .content .title i {
+    /* i标签默认是斜体 这个属性可以变正 */
+    font-style: normal;
+    font-size: 24px;
+    color: #909399;
+    cursor: pointer;
+}
+
+.model-box-2 .contents .titles i {
+    /* i标签默认是斜体 这个属性可以变正 */
+    font-style: normal;
+    font-size: 24px;
+    color: #909399;
+    cursor: pointer;
+}
+
+
+/* 鼠标移入变色 */
+
+.model-box .content .title i:hover {
+    color: #409eff;
+}
+
+.model-box .content form .form-input {
+    margin: 10px 0;
+}
+
+.model-box-2 .contents .titles i:hover {
+    color: #409eff;
+}
+
+.model-box-2 .contents form .form-input {
+    margin: 20px 0;
+}
+
+
+/* 因为label元素的for属性和input元素id属性设置了相同的属性值 所以就可以通过label元素选中 输入框 布局已完成 下一个视频开始js的书写 */
+
+.model-box .content form .form-input label {
+    font-size: 14px;
+    color: #606266;
+    cursor: pointer;
+}
+
+.model-box-2 .contents form .form-input label {
+    font-size: 14px;
+    color: #606266;
+    cursor: pointer;
+}
+
+.model-box .content form .form-input input {
+    /* 取消输入框默认的轮廓 表单元素一般都有轮廓 很不好看 */
+    outline: 0;
+    width: 100%;
+    height: 42px;
+    padding: 0 15px;
+    margin-top: 20px;
+    border: 1px solid #dcdfe6;
+    border-radius: 4px;
+}
+
+.model-box-2 .contents form .form-input input {
+    /* 取消输入框默认的轮廓 表单元素一般都有轮廓 很不好看 */
+    outline: 0;
+    width: 100%;
+    height: 42px;
+    padding: 0 15px;
+    margin-top: 20px;
+    border: 1px solid #dcdfe6;
+    border-radius: 4px;
+}
+
+.model-box .content form .form-input input:hover {
+    border-color: #c0c4cc;
+}
+
+.model-box-2 .contents form .form-input input:hover {
+    border-color: #c0c4cc;
+}
+
+
+/* 输入框获取焦点变色 */
+
+.model-box .content form .form-input input:focus {
+    border-color: #409eff;
+}
+
+.model-box-2 .contents form .form-input input:focus {
+    border-color: #409eff;
+}
+
+.model-box .content form .form-input button {
+    /* 让按钮浮动到右侧 */
+    float: right;
+    margin-top: 10px;
+}
+
+.model-box-2 .contents form .form-input button {
+    /* 让按钮浮动到右侧 */
+    float: right;
+    margin-top: 10px;
+}
+
+.bott{
+	width: 250px;
+	height: 60px;
+	position: absolute;
+	top: 20px;
+	right: 30px;
+}
+
+.login_box{
+	position: absolute;
+	top: 280px;
+}
+.col{
+	position: absolute;
+	top: 340px;
+}
+.login_box input{
+	width: 250px;
+	font-family: 楷体;
+}
+.login{
+	position: absolute;
+	top: 310px;
+}
+.col_img{
+	position: absolute;
+	top: 370px;
+}
+.login input{
+	width: 250px;
+	font-family: 楷体;
+}
+.midland{
+	width: 100%;
+	height: 1500px;
+}
+.conts{
+	width: 100%;
+	height: 500px;
+}
+.conts_div{
+	position: absolute;
+	left: 50%;
+	top: 70px;
+	width: 50%;
+	height: 500px;
+	font-size: 30px;
+	font-family: 楷体;
+}
+.conts_1{
+	width: 100%;
+	height: 500px;
+}
+.conts_div p{
+    margin-top: 150px;
+}
+.conts_div_1{
+	position: absolute;
+	left: 50%;
+	top: 570px;
+	width: 50%;
+	height: 500px;
+	font-size: 30px;
+	font-family: 楷体;
+}
+.conts_div_1 p{
+    margin-top: 110px;
+}
+.conts_2{
+	width: 100%;
+	height: 500px;
+}
+.conts_div_2{
+	position: absolute;
+	left: 50%;
+	top: 1070px;
+	width: 50%;
+	height: 500px;
+	font-size: 30px;
+    font-family: 楷体;
+}
+.conts_div_2 p{
+    margin-top: 150px;
+}
+/*底部*/
+.bottom{
+	width: 100%;
+	height: 370px;
+}
+.bottom_gray{
+	width: 100%;
+	height: 300px;
+	background: gray;
+	position: relative;
+}
+.bottom_gray img{
+	position: absolute;
+	left: 20%;
+    top:20px;
+}
+.phone{
+	position: absolute;
+	left: 20%;
+	top: 100px;
+    font-family: 楷体；
+}
+.microblog{
+    position: absolute;
+    left: 20%;
+    top: 120px;
+    font-family: 楷体；
+}
+.product{
+    position: absolute;
+    left: 40%;
+}
+.product div{
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bolder;
+    color: white;
+}
+.product ul li{
+    list-style: none;
+    margin: 15px 1px;
+}
+.customer{
+    position: absolute;
+    left: 50%;
+}
+.customer div{
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bolder;
+    color: white;
+}
+.customer ul li{
+    list-style: none;
+    margin: 15px 1px;
+}
+.support{
+    position: absolute;
+    left: 60%;
+}
+.support div{
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bolder;
+    color: white;
+}
+.support ul li{
+    list-style: none;
+    margin: 15px 1px;
+}
+.team{
+    position: absolute;
+    left: 70%;
+}
+.team div{
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bolder;
+    color: white;
+}
+.team ul li{
+    list-style: none;
+    margin: 15px 1px;
+}
+.black{
+    position: absolute;
+    width: 100%;
+    height:70px;
+    background:black;
+}
+.black_font{
+    position: absolute;
+    left: 40%;
+    top: 20px;
+    color: gray;
+    font-family: 楷体;
+}
+.imgs{
+    position: absolute;
+    left: 47%;
+    top: 10px;
+}
+.imgss{
+    position: absolute;
+    left: 51%;
+    top: 10px;
+}
+.imgsss{
+    position: absolute;
+    left: 55%;
+    top: 10px;
+}

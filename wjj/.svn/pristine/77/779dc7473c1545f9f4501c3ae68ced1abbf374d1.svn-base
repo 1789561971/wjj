@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="/static/home/css/partuc.css">
+    <script rel="stylesheet" type="text/javascript" src="/static/js/jquery.min.js"></script>
+</head>
+<body>
+<div class="box_question">
+    <div class="question_top">
+        <div class="top_i"><a href="../quit">返回首页</a></div>
+        <div class="top_iii"><a href="/home/circle/index">提交问卷</a></div>
+    </div>
+    <div class="question_left" >
+        <div class="left_headline" id="question_left">
+            <h2 id="Title">{$data_name.front_name}</h2>
+            <input type="text" name="" value="{$info.surve_brief}" class="head_inp" placeholder="添加问卷说明">
+        </div>
+
+        {foreach $ques as $value}
+                <hr>
+                <div class="bbgg">
+                    <div class="content_title">
+                        <h3>{$value.ques_tion}{$value.ques_name}</h3>
+                    </div>
+                    <div id="Codiv">
+                            {foreach $opti_data as $valueg}
+                            {/foreach}
+                        {foreach $valueg as $kes => $valuez}
+                        <div class="content1">
+                            <label>
+                                {$valuez.opti_nono}
+                            </label>
+                            {if empty($value['ques_type']) neq true}
+                            <span>
+                                {$valuez.opti_text}
+                            </span>
+                            <input type="{$value.ques_type}" name="{$value.ques_name}" class="click" value="{$valuez.opti_text}"/>
+                            {else /}<textarea style="resize: none" class="textnone"></textarea>
+                            {/if}
+                        </div>
+                        {/foreach}
+                    </div>
+                </div>
+        {/foreach}
+    </div>
+</div>
+</body>
+</html>
+<script>
+    window.arr = [];
+    window.arrs = [];
+        $(function () {
+
+            $('.click').on('click',function () {
+
+                var reg = /\d+/g;
+                var opti_state = $(this).prevAll('label').text();
+                var opti_state = opti_state.match(opti_state);
+
+
+                var stan = $(this).val(); //选项内容
+                var answer_pid = $('#Title').text();
+                var answer_xid = opti_state[0];
+
+                $.ajax({
+                    type:'post',
+                    url:"/home/circle/insert",
+                    data:{
+                        answer_pid,
+                        stan,
+                        answer_xid
+                    },
+                    datatype:'json',
+                    success:function(e){
+
+                    },
+                    error:function(){
+                        console.log('ajax执行出错，在这里处理!')
+                    }
+                })
+            })
+        $('.textnone').on('blur',function () {
+            var reg = /\d+/g;
+            var answer_pid = $('#Title').text();
+            var opti_state = $(this).parent().parent().prev().text();
+            var opti_state = opti_state.match(reg);
+            var answer_xid = opti_state[0];
+            var stan = $(this).val();
+            var answer_pid = $('#Title').text();
+            console.log(answer_xid,stan,answer_pid);
+
+
+            $.ajax({
+                type:'post',
+                url:"/home/circle/insert",
+                data:{
+                    answer_pid,
+                    stan,
+                    answer_xid
+                },
+                datatype:'json',
+                success:function(e){
+
+                },
+                error:function(){
+                    console.log('ajax执行出错，在这里处理!')
+                }
+            })
+        })
+
+
+
+        })
+
+</script>

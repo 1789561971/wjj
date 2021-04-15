@@ -1,0 +1,16 @@
+<?php
+
+namespace app\home\controller;
+
+use think\Controller;
+use think\Request;
+
+class Information extends Controller
+{
+    //调用用户信息视图
+    public function index()
+    {
+        return view('home@information/info');
+    }
+
+}

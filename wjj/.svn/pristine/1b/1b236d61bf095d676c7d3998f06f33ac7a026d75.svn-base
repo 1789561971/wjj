@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>侧边展开导航栏(半隐藏)</title>
+		<!-- 这个是提前引入的字体图标 -->
+		<link rel="stylesheet" href="./static/admin/css/font-awesome.css" />
+		<link rel="stylesheet" href="/static/admin/css/admin.css" />
+		<script src="https://kit.fontawesome.com/d64e940005.js" crossorigin="anonymous"></script>
+		<script>
+			function confirmDel(admin_id){
+				if (window.confirm('是否确定删除？')){
+					window.location.href = './admin/index/del?id='+admin_id;
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div class="navbar">
+			<input type="checkbox" id="checkbox" class="checkbox"/>
+			<!-- 复选框的id属性值和label元素的for属性值必须是相同的,才能够通过点击label选中复选框 -->
+			<label for="checkbox">
+				<i class="fa fa-bars"></i>
+
+			</label>
+
+			<ul>
+				<li>
+					<img src="../static/admin/images/10.jpg" alt="" />
+					<span>欢迎您! 管理员</span>
+				</li>
+				<li>
+					<a href="javascript:void(0)">
+						<i class="fa fa-home"></i>
+						<span>后台首页</span>
+					</a>
+				</li>
+<!--				<li>-->
+<!--					<a href="javascript:void(0)">-->
+<!--						<i class="fa fa-sitemap"></i>-->
+<!--						<span>列表</span>-->
+<!--					</a>-->
+<!--				</li>-->
+				<li>
+					<a href="javascript:void(0)">
+						<i class="fa fa-user"></i>
+						<span>用户列表</span>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:void(0)">
+						<i class="fa fa-shopping-cart"></i>
+						<span>问卷列表</span>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:void(0)">
+						<i class="fa fa-windows"></i>
+						<span>问卷管理</span>
+					</a>
+				</li>
+				<li>
+					<a href="./home/home">
+						<i class="fas fa-arrow-left"></i>
+						<span>退出登录</span>
+					</a>
+				</li>
+			</ul>
+
+			<div class="centen" style=""></div>
+
+			<div class="center">
+				<a href="question"><button class="addbut">+  新建</button></a>
+				<a href=""><button class="editbut">..  回收站</button></a>
+				<input type="text" placeholder="按标题查找" class="cipt"/><button class="sbut">搜索</button>
+
+				<div class="neiron">
+					<form action="{:url('/admin/index/del')}" method="post">
+					<table border="1" cellspacing="0" >
+						<tr>
+							<td>id</td>
+							<td>标题</td>
+							<td>创建时间</td>
+							<td>发布时间</td>
+							<td>结束时间</td>
+							<td>发布状态</td>
+							<td>操作</td>
+						</tr>
+						{volist name='arr' id='home'}
+						<tr>
+							<td>{$home.admin_id}</td>
+							<td> {$home.title}			</td>
+							<td> {$home.create_time}    </td>
+							<td> {$home.begin_time} 	</td>
+							<td> {$home.over_time}	 	</td>
+							<td> {$home.release} 		</td>
+							<td>
+								<a href="#">查看详情</a>
+								<a href="#" onclick="confirmDel({$home.admin_id})">删除</a>
+							</td>
+						</tr>
+						{/volist}
+					</table>
+				</form>
+					<button class="fy">分页</button>
+				</div>
+			</div>
+
+		</div>
+
+	</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="/static/home/css/choose.css">
+	<script src="/static/js/jquery.min.js"></script>
+	<script type="text/javascript" src="/static/home/script/choose.js"></script>
+</head>
+<body>
+	<div class="box_choose">
+		<!--页头-->
+		<div class="choose_head">
+			<div class="head_w">问卷军</div>
+			<div class="head_bar">
+				<a class="bar_a">我的问卷</a>
+				<a class="bar_a" href="./home">退出登录</a>
+				<div class="bar_a">用户名称</div>
+			</div>
+		</div>
+
+		
+		<!--创建列表-->
+		<div class="choose_list">
+			<div class="list_inquiry" align="center">
+				<img src="/static/home/images/choose/1.png" class="inquiry_img">
+				<h3 style="margin-top: 4%;">调查</h3>
+				<div class="inquiry_char">
+					<p class="inquiry_p">丰富题型，强大逻辑</p>
+					<p class="inquiry_p">问卷密码，红包抽奖</p>
+				</div>
+				<div class="establish">创建</div>
+			</div>
+
+			<div class="list_exam" align="center">
+				<img src="/static/home/images/choose/2.png" class="exam_img">
+				<h3 style="margin-top: 4%;">考试</h3>
+				<div class="exam_char">
+					<p class="exam_p">题库抽题，限时作答</p>
+					<p class="exam_p">成绩查询，自动阅卷</p>
+				</div>
+				<div class="establish1">创建</div>
+			</div>
+
+			<div class="list_vote" align="center">
+				<img src="/static/home/images/choose/3.png" class="vote_img">
+				<h3 style="margin-top: 4%;">投票</h3>
+				<div class="vote_char">
+					<p class="vote_p">图文视频，选项随机</p>
+					<p class="vote_p">实时排行，微信投票</p>
+				</div>
+				<div class="establish2">创建</div>
+			</div>
+
+			<div class="list_form" align="center">
+				<img src="/static/home/images/choose/4.png" class="form_img">
+				<h3 style="margin-top: 4%;">表单</h3>
+				<div class="form_char">
+					<p class="form_p">信息登记，活动报名</p>
+					<p class="form_pi">Excel导入数据</p>
+				</div>
+				<div class="establish3">创建</div>
+			</div>
+
+			<div class="list_assess" align="center">
+				<img src="/static/home/images/choose/5.png" class="assess_img">
+				<h3 style="margin-top: 4%;">360度评估</h3>
+				<div class="assess_char">
+					<p class="assess_p">批量评估，权重维度</p>
+					<p class="assess_pi">教学评估</p>
+				</div>
+				<div class="establish4">创建</div>
+			</div>
+
+			<div class="list_eval" align="center">
+				<img src="/static/home/images/choose/4.png" class="eval_img">
+				<h3 style="margin-top: 4%;">测评</h3>
+				<div class="eval_char">
+					<p class="eval_p">支持多级测评维度</p>
+					<p class="eval_p">自动呈现测评报告</p>
+				</div>
+				<div class="establish5">创建</div>
+			</div>
+
+		</div>
+
+
+
+	</div>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="/static/home/css/infos.css">
+</head>
+<body>
+	<div class="box_info">
+		<!--页头-->
+		<div class="info_head">
+			<div class="head_w">问卷军</div>
+			<div class="head_bar">
+				<a class="bar_a">我的问卷</a>
+				<a class="bar_a" href="./home">退出登录</a>
+				<div class="bar_a">用户名称</div>
+			</div>
+		</div>
+
+		<!--用户信息-->
+		<div class="info_user">
+			<div class="user_right">
+				<h3 style="margin-left: 180px;">注册信息</h3>
+				<div class="user_info">
+					<p class="user_p"><label>用户名：</label><label class="user_la">88888888</label></p>
+					<p class="user_p"><label>账号ID：</label><label class="user_la">88888888</label></p>
+					<p class="user_p"><label>账号类型：</label><label class="user_la">天上地下第一大会员</label></p>
+					<p class="user_p"><label>邮件地址：</label><label class="user_la">110@qq.com</label></p>
+					<p class="user_p"><label>手机号码：</label><label class="user_la">110</label></p>
+					<p class="user_p"><label>微信：</label><label class="user_la">wx110</label></p>
+					<p class="user_p"><label>密码：</label><label class="user_la">******</label></p>
+				</div>
+			</div>
+			
+			<div class="user_left">
+				<h3 style="margin-left: 180px;">企业信息</h3>
+				<div class="user_ext">
+					<p class="user_p"><label>公司名称：</label></p>
+					<p class="user_p"><label>企业logo：</label></p>
+					<p class="user_p"><label>自定义域名：</label></p>
+				</div>
+			</div>
+
+		</div>
+
+
+
+		<!--账户信息-->
+		<h1 style="margin-left: 14%;margin-top: 50px;">账户信息</h1>
+		<div class="info_acc">
+			<div class="acc_cash">
+				<div class="cash_xi">现金账户金额</div>
+				<div class="cash_elem">0<label style="font-size: 25px;">元</label></div>
+				<div class="cash_up">账户充值</div>
+				<a href="#" class="cash_a">交易记录</a>
+			</div>
+
+			<div class="acc_note">
+				<div class="note_num">可发送短信数</div>
+				<div class="note_art">0<label style="font-size: 25px;">条</label></div>
+				<div class="note_up">购买短信</div>
+				<a href="#" class="note_a">交易记录</a><a href="#" class="note_b">发送短信</a>
+			</div>
+
+			<div class="acc_packet">
+				<div class="packet_gift">红包账户金额</div>
+				<div class="packet_elem">0<label style="font-size: 25px;">元</label></div>
+				<a href="#" class="packet_a">交易记录</a>
+			</div>
+
+			<div class="acc_lab">
+				<div class="lab_xi">问卷星实验室</div>
+				<div class="lab_enter">进入实验室</div>
+			</div>
+
+
+		</div>
+
+
+
+
+	</div>
+</body>
+</html>

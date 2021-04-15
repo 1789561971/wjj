@@ -1,0 +1,19 @@
+<?php /*a:1:{s:54:"D:\wamp64\www\wjj\application\home\view\home\home.html";i:1616383122;}*/ ?>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>首页</title>
+	<link rel="stylesheet" type="text/css" href="/static/webuploader/webuploader.css">
+    <link href="/static/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="/static/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css"/>
+    <!-- <link rel="stylesheet" type="text/css" href="/static/home/css/home.css"/> -->
+    <script src="/static/bootstrap/js/jquery.min.js"></script>
+    <script src="/static/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="/static/Highcharts-9.0.1/code/highcharts.js"></script>
+</head>
+<body>
+<div class="home">
+	<div class="head"></div>
+</div>
+</body>
+</html>

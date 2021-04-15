@@ -1,0 +1,118 @@
+<?php /*a:1:{s:57:"D:\wamp64\www\wjj\application\admin\view\index\index.html";i:1617273259;}*/ ?>
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>侧边展开导航栏(半隐藏)</title>
+		<!-- 这个是提前引入的字体图标 -->
+		<link rel="stylesheet" href="/static/admin/css/font-awesome.css" />
+		<link rel="stylesheet" href="/static/admin/css/admin.css" />
+		<link rel="stylesheet" href="/static/bootstrap/dist/css/bootstrap.css"/>
+		<script>
+			function confirmDel(admin_id){
+				if (window.confirm('是否确定删除？')){
+					window.location.href = '/admin/index/del?id='+admin_id;
+				}
+			}
+		</script>
+	</head>
+	<style>
+		.pagination{
+			position: relative;
+			left: 48%;
+			top:100px;
+		}
+	</style>
+	<body>
+		<div class="navbar">
+			<input type="checkbox" id="checkbox" class="checkbox"/>
+			<!-- 复选框的id属性值和label元素的for属性值必须是相同的,才能够通过点击label选中复选框 -->
+			<label for="checkbox">
+				<i class="fa fa-bars"></i>
+			</label>
+
+			<ul class="one">
+				<li>
+					<img src="/static/admin/images/10.jpg" alt="" />
+					<span>欢迎您! 管理员</span>
+				</li>
+				<li>
+					<a href="<?php echo url('admin/index/index'); ?>">
+						<i class="fa fa-home"></i>
+						<span>问卷列表</span>
+					</a>
+				</li>
+				<li>
+					<a href="<?php echo url('admin/Useradmin/index'); ?>">
+						<i class="fa fa-user"></i>
+						<span>用户列表</span>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:void(0)">
+						<i class="fa fa-shopping-cart"></i>
+						<span>管理员列表</span>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:void(0)">
+						<i class="fa fa-windows"></i>
+						<span>问卷管理</span>
+					</a>
+				</li>
+				<li>
+					<a href="./home/home">
+						<i class="fas fa-arrow-left"></i>
+						<span>退出登录</span>
+					</a>
+				</li>
+			</ul>
+
+				<div class="center">
+					<div class="centen">
+						<a href="/home/chooseadmin"><button class="addbut">+  新建</button></a>
+						<a href=""><button class="editbut">回收站</button></a>
+						<a href="/admin/index/index"><button class="editbut">显示全部</button></a>
+						<form action="<?php echo url('/admin/index/SelText'); ?>" method="get">
+						<input type="text" placeholder="按标题查找" class="cipt" name="SelText"/>
+						<input type="submit"  class="sbut"  value="搜索"/>
+						</form>
+					</div>
+
+				<div class="neiron">
+					<form action="<?php echo url('/admin/index/del'); ?>" method="post">
+					<table border="1" cellspacing="0" >
+						<tr>
+							<td>id</td>
+							<td>标题</td>
+							<td>创建时间</td>
+							<td>发布时间</td>
+							<td>结束时间</td>
+							<td>发布状态</td>
+							<td>操作</td>
+						</tr>
+						<?php if(is_array($arr) || $arr instanceof \think\Collection || $arr instanceof \think\Paginator): $i = 0; $__LIST__ = $arr;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$home): $mod = ($i % 2 );++$i;?>
+						<tr>
+							<td><?php echo htmlentities($home['survey_id']); ?>		</td>
+							<td> <?php echo htmlentities($home['survey_name']); ?>	</td>
+							<td> <?php echo htmlentities($home['inser_time']); ?>    </td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td>
+								<a href="#">查看详情</a>
+								<a href="#" onclick="confirmDel(<?php echo htmlentities($home['survey_id']); ?>)">删除</a>
+							</td>
+						</tr>
+						<?php endforeach; endif; else: echo "" ;endif; ?>
+					</table>
+				</form>
+				</div>
+				<?php echo $arr; ?>
+			</div>
+
+		</div>
+
+	</body>
+</html>

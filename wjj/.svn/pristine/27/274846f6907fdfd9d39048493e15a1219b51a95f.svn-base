@@ -1,0 +1,1763 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>问卷创建</title>
+	<link rel="stylesheet" type="text/css" href="/static/home/css/question.css">
+<!--	<script src="https://kit.fontawesome.com/45fc2ca879.js" crossorigin="anonymous"></script>-->
+	<script rel="stylesheet" type="text/javascript" src="/static/ueditors/ueditor.config.js"></script>
+	<script rel="stylesheet" type="text/javascript" src="/static/ueditors/ueditor.all.js"></script>
+	<script rel="stylesheet" type="text/javascript" src="/static/js/jquery.min.js"></script>
+</head>
+
+<body>
+	<!--主div-->
+	<div class="box_question">
+		<!--浏览条-->
+		<div class="question_top">
+			<div class="top_i"><a href="../quit">返回首页</a></div>
+			<div class="top_ii"><a href="/admin/index/index">返回管理员中心</a></div>
+			<div class="top_iii"><a href="/admin/index/index">完成编辑</a></div>
+		</div>
+		<!--左侧导航栏-->
+		<div class="question_right">
+			<form action="" method="post">
+				<!---->
+				<select class="right_sel" onblur="subtype(this.value)">
+					<option value="单选">单选</option>
+					<option value="多选">多选</option>
+					<option value="填空">填空</option>
+				</select>
+
+				<input type="submit" name="" value="添加" class="right_inp" id="from_add">
+	
+			</form>
+		</div>
+		
+		<!--右侧问卷设计内容-->
+		<div class="question_left" >
+			<div class="left_headline" id="question_left">
+				<h2 id="Title">{$data}</h2>
+				<input type="text" name="" value="" class="head_inp" placeholder="添加问卷说明">
+			</div>
+
+
+		</div>
+	</div>
+</body>
+</html>
+<!-- 实例化编辑器 -->
+<script type="text/javascript">
+	/*选择问题类型函数*/
+	window.count_radio = 0;
+	window.count_checkbox = 0;
+	window.count_textarea = 0;
+	window.rocount = 2;
+	function subtype(data){
+		if(data == null && data == '' && data == undefined){
+			data = '单选';
+		}
+				if(data === '单选'){
+					data = 'radio';
+					if(count_radio === 0 ){
+						addradio(data);
+					}else{
+						addradios(data);
+					}
+				}else if(data === '多选'){
+					data = 'checkbox';
+					if(count_checkbox === 0){
+						choice(data);
+					}else{
+						choices(data);
+					}
+				}else{
+					if(count_textarea === 0){
+						textarea();
+					}else{
+						textareas();
+					}
+				}
+	}
+	function addradio(data){
+		var maxdiv = document.getElementById("question_left");
+		 window.right_sel = document.querySelector('.right_sel');
+		right_sel.disabled = 'disabled';
+		var br = document.createElement("br");
+		var hr = document.createElement("hr");
+		maxdiv.appendChild(br);
+		maxdiv.appendChild(hr);
+		window.sums = 1;
+		//创建题目最大的div并设置id，class
+		var div1 = document.createElement("div");
+		var outside = document.createElement("div");
+		outside.id = 'outside';
+		div1.className = 'content';
+		div1.id = 'div1';
+		maxdiv.appendChild(outside);
+		maxdiv.appendChild(div1);
+		//创建问题div并设置id，class
+		var div2 = document.createElement("div");
+		var maxdiv1 = document.getElementById("div1");
+		div2.className = 'content_title';
+		div2.id = 'div2';
+		maxdiv1.appendChild(div2);
+		//创建问题的h3标签并设置id，class
+		var hhh = document.createElement("h3");
+		var maxdiv2 = document.getElementById("div2");
+		hhh.innerText = sums+'.请输入题目';
+		hhh.id = 'hhh';
+		maxdiv2.appendChild(hhh);
+		var Codiv = document.createElement("div");
+		Codiv.style.width = 100+'%';
+		Codiv.style.height = 'auto';
+		Codiv.id = 'Codiv';
+		maxdiv.appendChild(Codiv);
+		//创建选项按钮并设置id，class
+		var div3 = document.createElement("div");
+		var div4 = document.createElement("div");
+		var label1 = document.createElement("label");
+		var label2 = document.createElement("label");
+		var span1 = document.createElement("span");
+		var span2 = document.createElement("span");
+		var input1 = document.createElement("input");
+		var input2 = document.createElement("input");
+		var sum = 2;
+		var Codiv1 = document.getElementById("Codiv");
+		span1.id = 'span1';
+		span2.id = 'span2';
+		div3.className = 'content1';
+		div3.id = 'div3';
+		div4.className = 'content1';
+		div4.id = 'div4';
+		Codiv1.appendChild(div3);
+		Codiv1.appendChild(div4);
+		var mindiv1 = document.getElementById("div3");
+		var mindiv2 = document.getElementById("div4");
+		mindiv1.appendChild(label1);
+		mindiv2.appendChild(label2);
+		label1.innerText = '1';
+		label2.innerText = '2';
+		label1.id = 'label1';
+		label2.id = 'label2';
+		var minlabel1 = document.getElementById("label1");
+		var minlabel2 = document.getElementById("label2");
+		minlabel1.appendChild(span1);
+		minlabel2.appendChild(span2);
+		span1.innerText = '选择1';
+		span2.innerText = '选择2';
+		minlabel1.appendChild(input1);
+		minlabel2.appendChild(input2);
+		input1.type = data;
+		input2.type = data;
+		input1.name = "item";
+		input2.name = "item";
+		sum++;
+		var outside_div = document.getElementById("outside");
+
+		outside_div.appendChild(maxdiv1);
+		outside_div.appendChild(Codiv1);
+		//创建题目菜单
+		var div5 = document.createElement("div");
+		div5.id = 'div5';
+		div5.className  = 'edit';
+		maxdiv.appendChild(div5);
+		var from1 = document.createElement("from");
+		var maxdiv3 = document.getElementById('div5');
+		from1.id = 'frome1';
+		maxdiv3.appendChild(from1);
+		var srcipt1 = document.createElement("script");
+		srcipt1.id = 'container';
+		srcipt1.name = 'content';
+		srcipt1.type = 'text/plain';
+		srcipt1.innerText = '请输入题目';
+		var froms = document.getElementById('frome1');
+		froms.appendChild(srcipt1);
+
+		window.datatext = '';
+		show('container','hhh');
+		var ohoh = document.getElementById("hhh");
+
+		var div6 = document.createElement("div");
+		div6.className = 'choice_hidd';
+		div6.id = 'div6';
+		div5.appendChild(div6);
+		var div7 = document.createElement("div");
+		var div8 = document.createElement("div");
+		var mindiv3 = document.getElementById('div6');
+		div7.id = 'div7';
+		div8.id = 'div8';
+		mindiv3.appendChild(div7);
+		mindiv3.appendChild(div8);
+		var input3 = document.createElement("input");
+		var input4 = document.createElement("input");
+
+		input3.type = 'text';
+		input3.id = 'input3';
+		input3.value = '选择1';
+		input4.type = 'text';
+		input4.id = 'input4';
+		input4.value = '选择2';
+
+		var span3 = document.createElement("span");
+		var span4 = document.createElement("span");
+		span3.innerText = '删除';
+		span4.innerText = '删除';
+		var mindiv4 = document.getElementById('div7');
+		var mindiv5 = document.getElementById('div8');
+		mindiv4.appendChild(input3);
+		mindiv4.appendChild(span3);
+		mindiv5.appendChild(input4);
+		mindiv5.appendChild(span4);
+
+		var div9 = document.createElement("div");
+		var div10 = document.createElement("div");
+		div9.className = 'choice_add';
+		div9.innerText = '增加';
+		div9.id = 'div9';
+		div10.className = 'choice_over';
+		div10.innerText = '完成';
+
+		maxdiv3.appendChild(div9);
+		maxdiv3.appendChild(div10);
+
+		var obinput3 = document.getElementById('input3');
+		var obinput4 = document.getElementById('input4');
+		//点击完成功能
+		var choice_over = document.querySelector('.choice_over');
+		choice_over.addEventListener('click',function () {
+			var div_choice_over = document.querySelector('#div5');
+			div_choice_over.parentNode.removeChild(div_choice_over);
+			right_sel.removeAttribute('disabled');
+			rocount = 2;
+			count_radio++;
+			count_checkbox++;
+			count_textarea++;
+			sums++;
+			$(function () {
+				Date.prototype.Format = function (fmt) {
+					var o = {
+						"M+": this.getMonth() + 1, //月份
+						"d+": this.getDate(), //日
+						"H+": this.getHours() -8, //小时
+						"m+": this.getMinutes(), //分
+						"s+": this.getSeconds(), //秒
+						"q+": Math.floor((this.getMonth() + 3) / 3), //季度
+						"S": this.getMilliseconds() //毫秒
+					};
+					if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+					for (var k in o)
+						if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+					return fmt;
+				}
+				var inser_time = new Date().Format("yyyy-MM-dd-HH:mm:ss");
+				var reg = /\d+/g;
+				var survey_name = $('#Title').text();
+				var surve_brief = $('.head_inp').val();
+				var hhh = $('#hhh').text();
+				var hos = hhh.match(reg);
+				var spli = hhh.split(hos);
+				var ques_tion = hhh.replace(/[^0-9]/ig,"");
+				var ques_name = spli[1];
+				var ques_type = data;
+
+				var opti_leng = $('#Codiv>div').length;
+
+				var opti = [];
+				var span = [];
+				var state = [];
+				for(let i = 1;i<=opti_leng;i++){
+					if(i>2){
+						var opti_nono1 = $('#label'+choose_num).text();
+						var opti_span1 = $('#span'+choose_num).text();
+						var opti_state = $('#label'+choose_num).children('input');
+						var opti_state = opti_state[0].checked;
+					}else{
+						var opti_nono1 = $('#label'+i).text();
+						var opti_span1 = $('#span'+i).text();
+						var opti_state = $('#label'+i).children('input');
+						var opti_state = opti_state[0].checked;
+					}
+					var ms1 = opti_nono1.match(reg);
+					opti.push(ms1);
+					span.push(opti_span1);
+					state.push(opti_state);
+				}
+				$.ajax({
+					type:'post',
+					url:"/home/question/getDate",
+					data:{
+						inser_time,
+						survey_name,
+						surve_brief,
+						ques_tion,
+						ques_name,
+						ques_type,
+						state,
+						opti,
+						span
+					},
+					datatype:'json',
+					success:function(e){
+
+					},
+					error:function(){
+						console.log('ajax执行出错，在这里处理!')
+					}
+				})
+			})
+		})
+
+		//选项内容自动改变
+		obinput3.addEventListener('change',function(){
+			var spantext1 = document.getElementById('span1');
+			spantext1.innerText = obinput3.value;
+
+		})
+		obinput4.addEventListener('change',function(){
+			var spantext2 = document.getElementById('span2');
+			spantext2.innerText = obinput4.value;
+		})
+
+
+		//增加选项和选择内容
+		var insert = document.getElementById('div9');
+		insert.addEventListener('click',function () {
+
+			addradir_text(data);
+		})
+	};
+	function addradir_text(data){
+		rocount++;
+		var Codiv1 = document.getElementById("Codiv");
+		var div11 = document.createElement("div");
+		div11.className = 'content1';
+		window.choose_num = Math.floor(Math.random() * 10000 + 12);
+		window.topic_num = Math.floor(Math.random() * 10000 + 12);
+
+		div11.id = 'div'+choose_num;
+		Codiv1.appendChild(div11);
+		var label3 = document.createElement("label");
+		label3.id = 'label'+choose_num;
+
+		label3.innerText = rocount;
+
+		var div14 = document.getElementById("div"+choose_num);
+		div14.appendChild(label3);
+		var span5 = document.createElement("span");
+		var labeles = document.getElementById("label"+choose_num);
+
+		span5.id = 'span'+choose_num;
+		labeles.appendChild(span5);
+		var input6 = document.createElement("input");
+		input6.type=data;
+		input6.name = 'item'
+		input6.id = 'input'+choose_num;
+		labeles.appendChild(input6);
+
+		var div18 = document.getElementById("div6");
+		var div17 = document.createElement("div");
+		var span7 = document.createElement("span");
+		var input6 = document.createElement("input");
+		div17.id = 'div'+topic_num;
+		div18.appendChild(div17);
+		//删除按钮功能
+		span7.addEventListener('click',function () {
+			var delect_choo = document.getElementById('div'+choose_num);
+			var delect_top = document.getElementById('div'+topic_num);
+			delect_choo.parentNode.removeChild(delect_choo);
+			delect_top.parentNode.removeChild(delect_top);
+			rocount--;
+		});
+		input6.type = 'text';
+
+		var nuben = rocount;
+		input6.value = '选择'+nuben;
+		input6.id = 'input'+topic_num;
+		span7.id = 'span'+topic_num;
+		span7.innerText = '删除';
+		var div19 = document.getElementById("div"+topic_num);
+		div19.appendChild(input6);
+		div19.appendChild(span7);
+		//选项内容自动改变
+		var obinput6 = document.getElementById('input'+topic_num);
+		obinput6.addEventListener('change',function(){
+			var spantext5 = document.getElementById('span'+choose_num);
+			spantext5.innerText = obinput6.value;
+		})
+	};
+	function addradios(data){
+		right_sel.disabled = 'disabled';
+		window.div_rand = Math.floor(Math.random() * 10000 + 12);
+		window.div_rand_bo = Math.floor(Math.random() * 10000 + 12);
+		var hr = document.createElement('hr');
+		var top_maxdiv = document.createElement('div');
+		var botton_maxdiv = document.createElement('div');
+		botton_maxdiv.id = 'botton_maxdiv'+div_rand_bo;
+		botton_maxdiv.className = 'edit';
+		var question_left = document.getElementById('question_left');
+		question_left.appendChild(hr);
+		top_maxdiv.id = 'div'+div_rand;
+		question_left.appendChild(top_maxdiv);
+		question_left.appendChild(botton_maxdiv);
+		var Codivs = document.createElement("div");
+		Codivs.id = 'Codivs'+div_rand;
+		var maxdiv = document.getElementById('div'+div_rand);
+
+		var div1 = document.createElement("div");
+		var outside = document.createElement("div");
+		outside.id = 'outside'+div_rand;
+		div1.className = 'content';
+		div1.id = 'div_tow'+div_rand;
+		maxdiv.appendChild(outside);
+		maxdiv.appendChild(Codivs);
+		var outside_div = document.getElementById('outside'+div_rand);
+		outside_div.appendChild(div1);
+		var content_div = document.querySelector('#div_tow'+div_rand);
+		var title_div = document.createElement("div");
+		title_div.className = 'content_title';
+		title_div.id = 'title_div'+div_rand;
+		content_div.appendChild(title_div);
+		var ti_div = document.querySelector('#title_div'+div_rand);
+		var hhh = document.createElement("h3");
+		hhh.innerText = sums+'.'+'请输入题目';
+		hhh.id = 'hhh'+div_rand;
+		ti_div.appendChild(hhh);
+
+		var choose_top = document.createElement("div");
+		var choose_botton = document.createElement("div");
+		choose_top.className = 'content1';
+		choose_top.id = 'choose_top'+div_rand;
+		choose_botton.className = 'content1';
+		choose_botton.id = 'choose_botton'+div_rand;
+		var Codivs_div = document.getElementById('Codivs'+div_rand);
+		Codivs_div.appendChild(choose_top);
+		Codivs_div.appendChild(choose_botton);
+		var choose_top_lab = document.createElement("label");
+		choose_top_lab.id = 'choose_top_lab'+div_rand;
+		choose_top_lab.innerText = '1';
+		var choose_botton_lab = document.createElement("label");
+		choose_botton_lab.id = 'choose_botton_lab'+div_rand;
+		choose_botton_lab.innerText = '2';
+		var choose_top_span = document.createElement("span");
+		choose_top_span.id = 'choose_top_span'+div_rand;
+		choose_top_span.innerText = '选择1';
+		var choose_botton_span = document.createElement("span");
+		choose_botton_span.id = 'choose_botton_span'+div_rand;
+		choose_botton_span.innerText = '2';
+		choose_botton_span.innerText = '选择2';
+		var choose_top_inp = document.createElement("input");
+		choose_top_inp.type = data;
+		choose_top_inp.name = 'item'+div_rand;
+		var choose_botton_inp = document.createElement("input");
+		choose_botton_inp.type = data;
+		choose_botton_inp.name = 'item'+div_rand;
+
+		var choose_top_div = document.getElementById('choose_top'+div_rand);
+		choose_top_div.appendChild(choose_top_lab);
+		var label_top = document.getElementById('choose_top_lab'+div_rand);
+		label_top.appendChild(choose_top_span);
+		label_top.appendChild(choose_top_inp);
+		var  choose_botton_div = document.getElementById('choose_botton'+div_rand);
+		choose_botton_div.appendChild(choose_botton_lab);
+		var label_botton = document.getElementById('choose_botton_lab'+div_rand);
+		label_botton.appendChild(choose_botton_span);
+		label_botton.appendChild(choose_botton_inp);
+
+		//创建菜单
+		var menu_form = document.createElement("form");
+		menu_form.id = 'menu_form'+div_rand_bo;
+		var botton_max_div = document.getElementById('botton_maxdiv'+div_rand_bo);
+		botton_max_div.appendChild(menu_form);
+		var menu_srcipt = document.createElement("srcipt");
+		menu_srcipt.id = 'menu_srcipt'+div_rand_bo;
+		menu_srcipt.name = 'content';
+		menu_srcipt.type = 'text/plain';
+		var menu_form_div = document.getElementById('menu_form'+div_rand_bo);
+		menu_form_div.appendChild(menu_srcipt);
+		window.datatext = '';
+		show('menu_srcipt'+div_rand_bo,'hhh'+div_rand);
+
+		var botton_div = document.createElement("div");
+		botton_div.className = 'choice_hidd';
+		botton_div.id = 'botton_max_div'+div_rand_bo;
+		botton_max_div.appendChild(botton_div);
+		var botton_min_top = document.createElement("div");
+		botton_min_top.id = 'botton_min_top'+div_rand_bo;
+		var botton_min_bot = document.createElement("div");
+		botton_min_bot.id = 'botton_min_bot'+div_rand_bo;
+		var bottonmaxdiv = document.getElementById('botton_max_div'+div_rand_bo);
+		bottonmaxdiv.appendChild(botton_min_top);
+		bottonmaxdiv.appendChild(botton_min_bot);
+		var botton_input = document.createElement("input");
+		botton_input.type = 'text';
+		botton_input.value = '选项1';
+		botton_input.id = 'botton_input'+div_rand_bo;
+		var botton_input2 = document.createElement("input");
+		botton_input2.type = 'text';
+		botton_input2.value = '选项2';
+		botton_input2.id = 'botton_input2'+div_rand_bo;
+		var botton_span = document.createElement("span");
+		botton_span.innerText = '删除';;
+		botton_span.id = 'botton_span'+div_rand_bo;
+		var botton_span2 = document.createElement("span");
+		botton_span2.id = 'botton_span2'+div_rand_bo;
+		botton_span2.innerText = '删除';
+
+		var botton_min_top_id = document.getElementById('botton_min_top'+div_rand_bo);
+		botton_min_top_id.appendChild(botton_input);
+		botton_min_top_id.appendChild(botton_span);
+		var botton_min_bot_id = document.getElementById('botton_min_bot'+div_rand_bo);
+		botton_min_bot_id.appendChild(botton_input2);
+		botton_min_bot_id.appendChild(botton_span2);
+		var bo_inpit1 = document.getElementById('botton_input'+div_rand_bo);
+		var bo_inpit2 = document.getElementById('botton_input2'+div_rand_bo);
+		console.log(bo_inpit1);
+		bo_inpit1.addEventListener('change',function(){
+			var spantext1 = document.getElementById('choose_top_span'+div_rand);
+			spantext1.innerText = bo_inpit1.value;
+
+		})
+		bo_inpit2.addEventListener('change',function(){
+			var spantext2 = document.getElementById('choose_botton_span'+div_rand);
+			spantext2.innerText = bo_inpit2.value;
+		})
+
+
+		var adder_div = document.createElement("div");
+		adder_div.className = 'choice_add';
+		adder_div.id = 'adder_div'+div_rand_bo;
+		adder_div.innerText = '增加';
+		var over_div = document.createElement("div");
+		over_div.className = 'choice_over';
+		over_div.innerText = '完成';
+		over_div.id = 'over_div'+div_rand_bo;
+		botton_max_div.appendChild(adder_div);
+		botton_max_div.appendChild(over_div);
+
+		var inserts = document.getElementById('adder_div'+div_rand_bo);
+		window.runchose_id = [];
+		inserts.addEventListener('click',function () {
+			window.idchoose_num = addradir_texts(data,'Codivs'+div_rand);
+			runchose_id.push(idchoose_num);
+		})
+		var choice_over = document.getElementById('over_div'+div_rand_bo);
+		//完成按钮
+		choice_over.addEventListener('click',function () {
+			var div_choice_over = document.querySelector('#botton_maxdiv'+div_rand_bo);
+			div_choice_over.parentNode.removeChild(div_choice_over);
+			right_sel.removeAttribute('disabled');
+			rocount = 2;
+			count_radio++;
+			count_checkbox++;
+			count_textarea++;
+			sums++;
+
+			$(function () {
+				Date.prototype.Format = function (fmt) {
+					var o = {
+						"M+": this.getMonth() + 1, //月份
+						"d+": this.getDate(), //日
+						"H+": this.getHours() -8, //小时
+						"m+": this.getMinutes(), //分
+						"s+": this.getSeconds(), //秒
+						"q+": Math.floor((this.getMonth() + 3) / 3), //季度
+						"S": this.getMilliseconds() //毫秒
+					};
+					if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+					for (var k in o)
+						if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+					return fmt;
+				}
+				var inser_time = new Date().Format("yyyy-MM-dd-HH:mm:ss");
+				var reg = /\d+/g;
+				var survey_name = $('#Title').text();
+				var surve_brief = $('.head_inp').val();
+				var hhh = $('#hhh'+div_rand).text();
+				var hos = hhh.match(reg);
+				var spli = hhh.split(hos);
+				var ques_tion = hhh.replace(/[^0-9]/ig,"");
+				var ques_name = spli[1];
+				var ques_type = data;
+
+				var opti_leng = $('#Codivs'+div_rand+'>div').length;
+
+				var optis = [];
+				var span = [];
+				var state = []; //choose_num
+
+				for(let i = 0;i<=opti_leng;i++){
+					if(i < 1){
+						var opti_top_lab = $('#choose_top_lab'+div_rand).text();
+						var opti_top_span = $('#choose_top_span'+div_rand).text();
+						var opti_top_state = $('#choose_top_lab'+div_rand).children('input');
+						var opti_state_top = opti_top_state[0].checked;
+
+						var opti_botton_lab = $('#choose_botton_lab'+div_rand).text();
+						var opti_botton_span = $('#choose_botton_span'+div_rand).text();
+						var opti_botton_state = $('#choose_botton_lab'+div_rand).children('input');
+						var opti_state_botton = opti_botton_state[0].checked;
+
+						var ms1 = opti_top_lab.match(reg);
+						var ms2 = opti_botton_lab.match(reg);
+
+						optis.push(ms1,ms2);
+						span.push(opti_top_span,opti_botton_span);
+						state.push(opti_state_top,opti_state_botton);
+					}
+
+				}
+
+				for(let u=0;u<runchose_id.length;u++){
+					var opti_lab = $('#label'+runchose_id[u]).text();
+					var opti_span = $('#span'+runchose_id[u]).text();
+					var opti_state = $('#label'+runchose_id).children('input');
+					var opti_state = opti_state[0].checked;
+
+					var ms3 = opti_lab.match(reg);
+					optis.push(ms3);
+					span.push(opti_span);
+					state.push(opti_state);
+				}
+
+					$.unique(span);
+					$.unique(optis);
+				$.ajax({
+					type:'post',
+					url:"/home/question/getDates",
+					data:{
+						inser_time,
+						survey_name,
+						surve_brief,
+						ques_tion,
+						ques_name,
+						ques_type,
+						state,
+						optis,
+						span
+					},
+					datatype:'json',
+					success:function(e){
+
+					},
+					error:function(){
+						console.log('ajax执行出错，在这里处理!')
+					}
+				})
+			})
+		})
+	};
+	function addradir_texts(data,codiv){
+		rocount++
+		var Codiv1 = document.getElementById(codiv);
+		var div11 = document.createElement("div");
+		div11.className = 'content1';
+		window.choose_num = Math.floor(Math.random() * 10000 + 12);
+		window.topic_num = Math.floor(Math.random() * 10000 + 12);
+		div11.id = 'div'+choose_num;
+		Codiv1.appendChild(div11);
+		var label3 = document.createElement("label");
+		label3.id = 'label'+choose_num;
+		label3.innerText = rocount;
+		var div14 = document.getElementById("div"+choose_num);
+		div14.appendChild(label3);
+		var span5 = document.createElement("span");
+		var labeles = document.getElementById("label"+choose_num);
+
+		span5.id = 'span'+choose_num;
+		labeles.appendChild(span5);
+		var input6 = document.createElement("input");
+		input6.type=data;
+		input6.name = 'item'+choose_num;
+		input6.id = 'input'+choose_num;
+		labeles.appendChild(input6);
+
+		var div18 = document.getElementById("botton_max_div"+div_rand_bo);
+		var div17 = document.createElement("div");
+		var span7 = document.createElement("span");
+		var input6 = document.createElement("input");
+		div17.id = 'div'+topic_num;
+		div18.appendChild(div17);
+		//删除按钮功能
+		span7.addEventListener('click',function () {
+			var delect_choo = document.getElementById('div'+choose_num);
+			var delect_top = document.getElementById('div'+topic_num);
+			delect_choo.parentNode.removeChild(delect_choo);
+			delect_top.parentNode.removeChild(delect_top);
+			rocount--;
+		});
+		input6.type = 'text';
+		var nuben = rocount;
+		input6.value = '选择'+nuben;
+		input6.id = 'input'+topic_num;
+		span7.id = 'span'+topic_num;
+		span7.innerText = '删除';
+		var div19 = document.getElementById("div"+topic_num);
+		div19.appendChild(input6);
+		div19.appendChild(span7);
+		//选项内容自动改变
+		var obinput6 = document.getElementById('input'+topic_num);
+		obinput6.addEventListener('change',function(){
+			var spantext5 = document.getElementById('span'+choose_num);
+			spantext5.innerText = obinput6.value;
+		})
+
+		return choose_num;
+	};
+	function show(id,title) {
+		var ue = UE.getEditor(id,{
+			toolbars:[['fullscreen', 'source', 'undo', 'redo','bold', 'italic', 'underline', 'fontborder', 'strikethrough', 'superscript', 'subscript', 'removeformat', 'formatmatch', 'autotypeset', 'blockquote', 'pasteplain', '|', 'forecolor', 'backcolor', 'insertorderedlist', 'insertunorderedlist', 'selectall', 'cleardoc'],],
+		});
+
+		ue.ready(function () {
+			ue.addListener("blur",function(){
+				datatext = ue.getContentTxt();
+				var ohoh = document.getElementById(title);
+				ohoh.innerText = sums+datatext;
+				return datatext;
+			})
+		})
+	};
+	function choice(data){
+		var maxdiv = document.getElementById("question_left");
+		window.right_sel = document.querySelector('.right_sel');
+		right_sel.disabled = 'disabled';
+		var br = document.createElement("br");
+		var hr = document.createElement("hr");
+		maxdiv.appendChild(br);
+		maxdiv.appendChild(hr);
+		window.sums = 1;
+		//创建题目最大的div并设置id，class
+		var div1 = document.createElement("div");
+		var outside = document.createElement("div");
+		outside.id = 'outside';
+		div1.className = 'content';
+		div1.id = 'div1';
+		maxdiv.appendChild(outside);
+		maxdiv.appendChild(div1);
+		//创建问题div并设置id，class
+		var div2 = document.createElement("div");
+		var maxdiv1 = document.getElementById("div1");
+		div2.className = 'content_title';
+		div2.id = 'div2';
+		maxdiv1.appendChild(div2);
+		//创建问题的h3标签并设置id，class
+		var hhh = document.createElement("h3");
+		var maxdiv2 = document.getElementById("div2");
+		hhh.innerText = sums+'.请输入题目';
+		hhh.id = 'hhh';
+		maxdiv2.appendChild(hhh);
+		var Codiv = document.createElement("div");
+		Codiv.style.width = 100+'%';
+		Codiv.style.height = 'auto';
+		Codiv.id = 'Codiv';
+		maxdiv.appendChild(Codiv);
+		//创建选项按钮并设置id，class
+		var div3 = document.createElement("div");
+		var div4 = document.createElement("div");
+		var label1 = document.createElement("label");
+		var label2 = document.createElement("label");
+		var span1 = document.createElement("span");
+		var span2 = document.createElement("span");
+		var input1 = document.createElement("input");
+		var input2 = document.createElement("input");
+		var sum = 2;
+		var Codiv1 = document.getElementById("Codiv");
+		span1.id = 'span1';
+		span2.id = 'span2';
+		div3.className = 'content1';
+		div3.id = 'div3';
+		div4.className = 'content1';
+		div4.id = 'div4';
+		Codiv1.appendChild(div3);
+		Codiv1.appendChild(div4);
+		var mindiv1 = document.getElementById("div3");
+		var mindiv2 = document.getElementById("div4");
+		mindiv1.appendChild(label1);
+		mindiv2.appendChild(label2);
+		label1.innerText = '1';
+		label2.innerText = '2';
+		label1.id = 'label1';
+		label2.id = 'label2';
+		var minlabel1 = document.getElementById("label1");
+		var minlabel2 = document.getElementById("label2");
+		minlabel1.appendChild(span1);
+		minlabel2.appendChild(span2);
+		span1.innerText = '选择1';
+		span2.innerText = '选择2';
+		minlabel1.appendChild(input1);
+		minlabel2.appendChild(input2);
+		input1.type = data;
+		input2.type = data;
+		input1.name = "item";
+		input2.name = "item";
+		sum++;
+		var outside_div = document.getElementById("outside");
+
+		outside_div.appendChild(maxdiv1);
+		outside_div.appendChild(Codiv1);
+		//创建题目菜单
+		var div5 = document.createElement("div");
+		div5.id = 'div5';
+		div5.className  = 'edit';
+		maxdiv.appendChild(div5);
+		var from1 = document.createElement("from");
+		var maxdiv3 = document.getElementById('div5');
+		from1.id = 'frome1';
+		maxdiv3.appendChild(from1);
+		var srcipt1 = document.createElement("script");
+		srcipt1.id = 'container';
+		srcipt1.name = 'content';
+		srcipt1.type = 'text/plain';
+		srcipt1.innerText = '请输入题目';
+		var froms = document.getElementById('frome1');
+		froms.appendChild(srcipt1);
+
+		window.datatext = '';
+		show('container','hhh');
+		var ohoh = document.getElementById("hhh");
+
+		var div6 = document.createElement("div");
+		div6.className = 'choice_hidd';
+		div6.id = 'div6';
+		div5.appendChild(div6);
+		var div7 = document.createElement("div");
+		var div8 = document.createElement("div");
+		var mindiv3 = document.getElementById('div6');
+		div7.id = 'div7';
+		div8.id = 'div8';
+		mindiv3.appendChild(div7);
+		mindiv3.appendChild(div8);
+		var input3 = document.createElement("input");
+		var input4 = document.createElement("input");
+
+		input3.type = 'text';
+		input3.id = 'input3';
+		input3.value = '选择1';
+		input4.type = 'text';
+		input4.id = 'input4';
+		input4.value = '选择2';
+
+		var span3 = document.createElement("span");
+		var span4 = document.createElement("span");
+		span3.innerText = '删除';
+		span4.innerText = '删除';
+		var mindiv4 = document.getElementById('div7');
+		var mindiv5 = document.getElementById('div8');
+		mindiv4.appendChild(input3);
+		mindiv4.appendChild(span3);
+		mindiv5.appendChild(input4);
+		mindiv5.appendChild(span4);
+
+		var div9 = document.createElement("div");
+		var div10 = document.createElement("div");
+		div9.className = 'choice_add';
+		div9.innerText = '增加';
+		div9.id = 'div9';
+		div10.className = 'choice_over';
+		div10.innerText = '完成';
+
+		maxdiv3.appendChild(div9);
+		maxdiv3.appendChild(div10);
+
+		var obinput3 = document.getElementById('input3');
+		var obinput4 = document.getElementById('input4');
+		//点击完成功能
+		var choice_over = document.querySelector('.choice_over');
+		choice_over.addEventListener('click',function () {
+			var div_choice_over = document.querySelector('#div5');
+			div_choice_over.parentNode.removeChild(div_choice_over);
+			right_sel.removeAttribute('disabled');
+			rocount = 2;
+			count_checkbox++;
+			count_radio++;
+			count_textarea++;
+			sums++;
+			$(function () {
+				Date.prototype.Format = function (fmt) {
+					var o = {
+						"M+": this.getMonth() + 1, //月份
+						"d+": this.getDate(), //日
+						"H+": this.getHours() -8, //小时
+						"m+": this.getMinutes(), //分
+						"s+": this.getSeconds(), //秒
+						"q+": Math.floor((this.getMonth() + 3) / 3), //季度
+						"S": this.getMilliseconds() //毫秒
+					};
+					if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+					for (var k in o)
+						if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+					return fmt;
+				}
+				var inser_time = new Date().Format("yyyy-MM-dd-HH:mm:ss");
+				var reg = /\d+/g;
+				var survey_name = $('#Title').text();
+				var surve_brief = $('.head_inp').val();
+				var hhh = $('#hhh').text();
+				var hos = hhh.match(reg);
+				var spli = hhh.split(hos);
+				var ques_tion = hhh.replace(/[^0-9]/ig,"");
+				var ques_name = spli[1];
+				var ques_type = data;
+
+				var opti_leng = $('#Codiv>div').length;
+
+				var opti = [];
+				var span = [];
+				var state = [];
+				for(let i = 1;i<=opti_leng;i++){
+					if(i>2){
+						var opti_nono1 = $('#label'+choose_num).text();
+						var opti_span1 = $('#span'+choose_num).text();
+						var opti_state = $('#label'+choose_num).children('input');
+						var opti_state = opti_state[0].checked;
+					}else{
+						var opti_nono1 = $('#label'+i).text();
+						var opti_span1 = $('#span'+i).text();
+						var opti_state = $('#label'+i).children('input');
+						var opti_state = opti_state[0].checked;
+					}
+					var ms1 = opti_nono1.match(reg);
+					opti.push(ms1);
+					span.push(opti_span1);
+					state.push(opti_state);
+				}
+				$.ajax({
+					type:'post',
+					url:"/home/question/getDate",
+					data:{
+						inser_time,
+						survey_name,
+						surve_brief,
+						ques_tion,
+						ques_name,
+						ques_type,
+						state,
+						opti,
+						span
+					},
+					datatype:'json',
+					success:function(e){
+
+					},
+					error:function(){
+						console.log('ajax执行出错，在这里处理!')
+					}
+				})
+			})
+		})
+
+		//选项内容自动改变
+		obinput3.addEventListener('change',function(){
+			var spantext1 = document.getElementById('span1');
+			spantext1.innerText = obinput3.value;
+
+		})
+		obinput4.addEventListener('change',function(){
+			var spantext2 = document.getElementById('span2');
+			spantext2.innerText = obinput4.value;
+		})
+
+
+		//增加选项和选择内容
+		var insert = document.getElementById('div9');
+		insert.addEventListener('click',function () {
+
+			addradir_text(data);
+		})
+	};
+	function choices(data){
+		right_sel.disabled = 'disabled';
+		window.div_rand = Math.floor(Math.random() * 10000 + 12);
+		window.div_rand_bo = Math.floor(Math.random() * 10000 + 12);
+		var hr = document.createElement('hr');
+		var top_maxdiv = document.createElement('div');
+		var botton_maxdiv = document.createElement('div');
+		botton_maxdiv.id = 'botton_maxdiv'+div_rand_bo;
+		botton_maxdiv.className = 'edit';
+		var question_left = document.getElementById('question_left');
+		question_left.appendChild(hr);
+		top_maxdiv.id = 'div'+div_rand;
+		question_left.appendChild(top_maxdiv);
+		question_left.appendChild(botton_maxdiv);
+		var Codivs = document.createElement("div");
+		Codivs.id = 'Codivs'+div_rand;
+		var maxdiv = document.getElementById('div'+div_rand);
+
+		var div1 = document.createElement("div");
+		var outside = document.createElement("div");
+		outside.id = 'outside'+div_rand;
+		div1.className = 'content';
+		div1.id = 'div_tow'+div_rand;
+		maxdiv.appendChild(outside);
+		maxdiv.appendChild(Codivs);
+		var outside_div = document.getElementById('outside'+div_rand);
+		outside_div.appendChild(div1);
+		var content_div = document.querySelector('#div_tow'+div_rand);
+		var title_div = document.createElement("div");
+		title_div.className = 'content_title';
+		title_div.id = 'title_div'+div_rand;
+		content_div.appendChild(title_div);
+		var ti_div = document.querySelector('#title_div'+div_rand);
+		var hhh = document.createElement("h3");
+		hhh.innerText = sums+'.'+'请输入题目';
+		hhh.id = 'hhh'+div_rand;
+		ti_div.appendChild(hhh);
+
+		var choose_top = document.createElement("div");
+		var choose_botton = document.createElement("div");
+		choose_top.className = 'content1';
+		choose_top.id = 'choose_top'+div_rand;
+		choose_botton.className = 'content1';
+		choose_botton.id = 'choose_botton'+div_rand;
+		var Codivs_div = document.getElementById('Codivs'+div_rand);
+		Codivs_div.appendChild(choose_top);
+		Codivs_div.appendChild(choose_botton);
+		var choose_top_lab = document.createElement("label");
+		choose_top_lab.id = 'choose_top_lab'+div_rand;
+		choose_top_lab.innerText = '1';
+		var choose_botton_lab = document.createElement("label");
+		choose_botton_lab.id = 'choose_botton_lab'+div_rand;
+		choose_botton_lab.innerText = '2';
+		var choose_top_span = document.createElement("span");
+		choose_top_span.id = 'choose_top_span'+div_rand;
+		choose_top_span.innerText = '选择1';
+		var choose_botton_span = document.createElement("span");
+		choose_botton_span.id = 'choose_botton_span'+div_rand;
+		choose_botton_span.innerText = '2';
+		choose_botton_span.innerText = '选择2';
+		var choose_top_inp = document.createElement("input");
+		choose_top_inp.type = data;
+		choose_top_inp.name = 'item';
+		var choose_botton_inp = document.createElement("input");
+		choose_botton_inp.type = data;
+		choose_botton_inp.name = 'item';
+
+		var choose_top_div = document.getElementById('choose_top'+div_rand);
+		choose_top_div.appendChild(choose_top_lab);
+		var label_top = document.getElementById('choose_top_lab'+div_rand);
+		label_top.appendChild(choose_top_span);
+		label_top.appendChild(choose_top_inp);
+		var  choose_botton_div = document.getElementById('choose_botton'+div_rand);
+		choose_botton_div.appendChild(choose_botton_lab);
+		var label_botton = document.getElementById('choose_botton_lab'+div_rand);
+		label_botton.appendChild(choose_botton_span);
+		label_botton.appendChild(choose_botton_inp);
+
+		//创建菜单
+		div_rand_bo
+		var menu_form = document.createElement("form");
+		menu_form.id = 'menu_form'+div_rand_bo;
+		var botton_max_div = document.getElementById('botton_maxdiv'+div_rand_bo);
+		botton_max_div.appendChild(menu_form);
+		var menu_srcipt = document.createElement("srcipt");
+		menu_srcipt.id = 'menu_srcipt'+div_rand_bo;
+		menu_srcipt.name = 'content';
+		menu_srcipt.type = 'text/plain';
+		var menu_form_div = document.getElementById('menu_form'+div_rand_bo);
+		menu_form_div.appendChild(menu_srcipt);
+		window.datatext = '';
+		show('menu_srcipt'+div_rand_bo,'hhh'+div_rand);
+
+		var botton_div = document.createElement("div");
+		botton_div.className = 'choice_hidd';
+		botton_div.id = 'botton_max_div'+div_rand_bo;
+		botton_max_div.appendChild(botton_div);
+		var botton_min_top = document.createElement("div");
+		botton_min_top.id = 'botton_min_top'+div_rand_bo;
+		var botton_min_bot = document.createElement("div");
+		botton_min_bot.id = 'botton_min_bot'+div_rand_bo;
+		var bottonmaxdiv = document.getElementById('botton_max_div'+div_rand_bo);
+		bottonmaxdiv.appendChild(botton_min_top);
+		bottonmaxdiv.appendChild(botton_min_bot);
+		var botton_input = document.createElement("input");
+		botton_input.type = 'text';
+		botton_input.value = '选项1';
+		botton_input.id = 'botton_input'+div_rand_bo;
+		var botton_input2 = document.createElement("input");
+		botton_input2.type = 'text';
+		botton_input2.value = '选项2';
+		botton_input2.id = 'botton_input2'+div_rand_bo;
+		var botton_span = document.createElement("span");
+		botton_span.innerText = '删除';
+		botton_span.id = 'botton_span'+div_rand_bo;
+		var botton_span2 = document.createElement("span");
+		botton_span2.id = 'botton_span2'+div_rand_bo;
+		botton_span2.innerText = '删除';
+
+		var botton_min_top_id = document.getElementById('botton_min_top'+div_rand_bo);
+		botton_min_top_id.appendChild(botton_input);
+		botton_min_top_id.appendChild(botton_span);
+		var botton_min_bot_id = document.getElementById('botton_min_bot'+div_rand_bo);
+		botton_min_bot_id.appendChild(botton_input2);
+		botton_min_bot_id.appendChild(botton_span2);
+		var bo_inpit1 = document.getElementById('botton_input'+div_rand_bo);
+		var bo_inpit2 = document.getElementById('botton_input2'+div_rand_bo);
+		console.log(bo_inpit1);
+		bo_inpit1.addEventListener('change',function(){
+			var spantext1 = document.getElementById('choose_top_span'+div_rand);
+			spantext1.innerText = bo_inpit1.value;
+
+		})
+		bo_inpit2.addEventListener('change',function(){
+			var spantext2 = document.getElementById('choose_botton_span'+div_rand);
+			spantext2.innerText = bo_inpit2.value;
+		})
+
+
+		var adder_div = document.createElement("div");
+		adder_div.className = 'choice_add';
+		adder_div.id = 'adder_div'+div_rand_bo;
+		adder_div.innerText = '增加';
+		var over_div = document.createElement("div");
+		over_div.className = 'choice_over';
+		over_div.innerText = '完成';
+		over_div.id = 'over_div'+div_rand_bo;
+		botton_max_div.appendChild(adder_div);
+		botton_max_div.appendChild(over_div);
+
+		var inserts = document.getElementById('adder_div'+div_rand_bo);
+		window.rungg_id = [];
+		inserts.addEventListener('click',function () {
+
+			window.run_id = addradir_texts(data,'Codivs'+div_rand);
+			rungg_id.push(run_id);
+		})
+		var choice_over = document.getElementById('over_div'+div_rand_bo);
+		choice_over.addEventListener('click',function () {
+			var div_choice_over = document.querySelector('#botton_maxdiv'+div_rand_bo);
+			div_choice_over.parentNode.removeChild(div_choice_over);
+			right_sel.removeAttribute('disabled');
+			rocount = 2;
+			count_radio++;
+			count_checkbox++;
+			count_textarea++;
+			sums++;
+
+			$(function () {
+				Date.prototype.Format = function (fmt) {
+					var o = {
+						"M+": this.getMonth() + 1, //月份
+						"d+": this.getDate(), //日
+						"H+": this.getHours() -8, //小时
+						"m+": this.getMinutes(), //分
+						"s+": this.getSeconds(), //秒
+						"q+": Math.floor((this.getMonth() + 3) / 3), //季度
+						"S": this.getMilliseconds() //毫秒
+					};
+					if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+					for (var k in o)
+						if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+					return fmt;
+				}
+				var inser_time = new Date().Format("yyyy-MM-dd-HH:mm:ss");
+				var reg = /\d+/g;
+				var survey_name = $('#Title').text();
+				var surve_brief = $('.head_inp').val();
+				var hhh = $('#hhh'+div_rand).text();
+				var hos = hhh.match(reg);
+				var spli = hhh.split(hos);
+				var ques_tion = hhh.replace(/[^0-9]/ig,"");
+				var ques_name = spli[1];
+				var ques_type = data;
+
+				var opti_leng = $('#Codivs'+div_rand+'>div').length;
+
+				var optis = [];
+				var span = [];
+				var state = []; //choose_num
+
+				for(let i = 0;i<=opti_leng;i++){
+					if(i < 1){
+						var opti_top_lab = $('#choose_top_lab'+div_rand).text();
+						var opti_top_span = $('#choose_top_span'+div_rand).text();
+						var opti_top_state = $('#choose_top_lab'+div_rand).children('input');
+						var opti_state_top = opti_top_state[0].checked;
+
+						var opti_botton_lab = $('#choose_botton_lab'+div_rand).text();
+						var opti_botton_span = $('#choose_botton_span'+div_rand).text();
+						var opti_botton_state = $('#choose_botton_lab'+div_rand).children('input');
+						var opti_state_botton = opti_botton_state[0].checked;
+
+						var ms1 = opti_top_lab.match(reg);
+						var ms2 = opti_botton_lab.match(reg);
+
+						optis.push(ms1,ms2);
+						span.push(opti_top_span,opti_botton_span);
+						state.push(opti_state_top,opti_state_botton);
+					}
+
+				}
+				if(rungg_id !== null){
+					for(let u=0;u<rungg_id.length;u++){
+						var opti_lab = $('#label'+rungg_id[u]).text();
+						var opti_span = $('#span'+rungg_id[u]).text();
+						var opti_state = $('#label'+rungg_id).children('input');
+						var opti_state = opti_state[0].checked;
+
+						var ms3 = opti_lab.match(reg);
+						optis.push(ms3);
+						span.push(opti_span);
+						state.push(opti_state);
+					}
+				}
+
+
+				$.unique(span);
+				$.unique(optis);
+				$.ajax({
+					type:'post',
+					url:"/home/question/getDates",
+					data:{
+						inser_time,
+						survey_name,
+						surve_brief,
+						ques_tion,
+						ques_name,
+						ques_type,
+						state,
+						optis,
+						span
+					},
+					datatype:'json',
+					success:function(e){
+
+					},
+					error:function(){
+						console.log('ajax执行出错，在这里处理!')
+					}
+				})
+			})
+		})
+	};
+	function textarea(){
+		var maxdiv = document.getElementById("question_left");
+		window.right_sel = document.querySelector('.right_sel');
+		right_sel.disabled = 'disabled';
+		var br = document.createElement("br")
+		var hr = document.createElement("hr");
+		maxdiv.appendChild(br);
+		maxdiv.appendChild(hr);
+		window.sums = 1;
+		//创建题目最大的div并设置id，class
+		var div1 = document.createElement("div");
+		var outside = document.createElement("div");
+		outside.id = 'outside';
+		div1.className = 'content';
+		div1.id = 'div1';
+		maxdiv.appendChild(outside);
+		maxdiv.appendChild(div1);
+		//创建问题div并设置id，class
+		var div2 = document.createElement("div");
+		var maxdiv1 = document.getElementById("div1");
+		div2.className = 'content_title';
+		div2.id = 'div2';
+		maxdiv1.appendChild(div2);
+		//创建问题的h3标签并设置id，class
+		var hhh = document.createElement("h3");
+		var maxdiv2 = document.getElementById("div2");
+		hhh.innerText = sums+'.请输入题目';
+		hhh.id = 'hhh';
+		maxdiv2.appendChild(hhh);
+		var Codiv = document.createElement("div");
+		Codiv.style.width = 100+'%';
+		Codiv.style.height = 'auto';
+		Codiv.id = 'Codiv';
+		maxdiv.appendChild(Codiv);
+		//创建选项按钮并设置id，class
+		var div3 = document.createElement("div");
+		var div4 = document.createElement("div");
+		var label1 = document.createElement("label");
+		var label2 = document.createElement("label");
+		var input1 = document.createElement("textarea");
+		var input2 = document.createElement("textarea");
+		var sum = 2;
+		var Codiv1 = document.getElementById("Codiv");
+		input1.id  = 'textarea1';
+		input2.id = 'textarea2';
+		input1.style.resize = 'none';
+		input2.style.resize = 'none';
+		div3.className = 'content1';
+		div3.id = 'div3';
+		div4.className = 'content1';
+		div4.id = 'div4';
+		Codiv1.appendChild(div3);
+		Codiv1.appendChild(div4);
+		var mindiv1 = document.getElementById("div3");
+		var mindiv2 = document.getElementById("div4");
+		mindiv1.appendChild(label1);
+		mindiv2.appendChild(label2);
+		label1.innerText = '1';
+		label2.innerText = '2';
+		label1.id = 'label1';
+		label2.id = 'label2';
+		var minlabel1 = document.getElementById("label1");
+		var minlabel2 = document.getElementById("label2");
+		minlabel1.appendChild(input1);
+		minlabel2.appendChild(input2);
+		sum++;
+		var outside_div = document.getElementById("outside");
+
+		outside_div.appendChild(maxdiv1);
+		outside_div.appendChild(Codiv1);
+		//创建题目菜单
+		var div5 = document.createElement("div");
+		div5.id = 'div5';
+		div5.className  = 'edit';
+		maxdiv.appendChild(div5);
+		var from1 = document.createElement("from");
+		var maxdiv3 = document.getElementById('div5');
+		from1.id = 'frome1';
+		maxdiv3.appendChild(from1);
+		var srcipt1 = document.createElement("script");
+		srcipt1.id = 'container';
+		srcipt1.name = 'content';
+		srcipt1.type = 'text/plain';
+		srcipt1.innerText = '请输入题目';
+		var froms = document.getElementById('frome1');
+		froms.appendChild(srcipt1);
+
+		window.datatext = '';
+		show('container','hhh');
+		var ohoh = document.getElementById("hhh");
+
+		var div6 = document.createElement("div");
+		div6.className = 'choice_hidd';
+		div6.id = 'div6';
+		div5.appendChild(div6);
+		var div7 = document.createElement("div");
+		var div8 = document.createElement("div");
+		var mindiv3 = document.getElementById('div6');
+		div7.id = 'div7';
+		div8.id = 'div8';
+		mindiv3.appendChild(div7);
+		mindiv3.appendChild(div8);
+		var input3 = document.createElement("input");
+		var input4 = document.createElement("input");
+
+		input3.type = 'text';
+		input3.id = 'input3';
+		input3.value = '选择1';
+		input4.type = 'text';
+		input4.id = 'input4';
+		input4.value = '选择2';
+
+		var span3 = document.createElement("span");
+		var span4 = document.createElement("span");
+		span3.innerText = '删除';
+		span4.innerText = '删除';
+		var mindiv4 = document.getElementById('div7');
+		var mindiv5 = document.getElementById('div8');
+		mindiv4.appendChild(input3);
+		mindiv4.appendChild(span3);
+		mindiv5.appendChild(input4);
+		mindiv5.appendChild(span4);
+
+		var div9 = document.createElement("div");
+		var div10 = document.createElement("div");
+		div9.className = 'choice_add';
+		div9.innerText = '增加';
+		div9.id = 'div9';
+		div10.className = 'choice_over';
+		div10.innerText = '完成';
+
+		maxdiv3.appendChild(div9);
+		maxdiv3.appendChild(div10);
+
+		var obinput3 = document.getElementById('input3');
+		var obinput4 = document.getElementById('input4');
+		//点击完成功能
+		var choice_over = document.querySelector('.choice_over');
+		choice_over.addEventListener('click',function () {
+			var div_choice_over = document.querySelector('#div5');
+			div_choice_over.parentNode.removeChild(div_choice_over);
+			right_sel.removeAttribute('disabled');
+			rocount = 2;
+			count_radio++;
+			count_checkbox++;
+			count_textarea++;
+			sums++;
+			$(function () {
+				Date.prototype.Format = function (fmt) {
+					var o = {
+						"M+": this.getMonth() + 1, //月份
+						"d+": this.getDate(), //日
+						"H+": this.getHours() -8, //小时
+						"m+": this.getMinutes(), //分
+						"s+": this.getSeconds(), //秒
+						"q+": Math.floor((this.getMonth() + 3) / 3), //季度
+						"S": this.getMilliseconds() //毫秒
+					};
+					if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+					for (var k in o)
+						if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+					return fmt;
+				}
+				var inser_time = new Date().Format("yyyy-MM-dd-HH:mm:ss");
+				var reg = /\d+/g;
+				var survey_name = $('#Title').text();
+				var surve_brief = $('.head_inp').val();
+				var hhh = $('#hhh').text();
+				var hos = hhh.match(reg);
+				var spli = hhh.split(hos);
+				var ques_tion = hhh.replace(/[^0-9]/ig,"");
+				var ques_name = spli[1];
+
+				var opti_leng = $('#Codiv>div').length;
+				var text = [];
+				var opti = [];
+				var ques_type = 'textarea';
+				for(let i = 1;i<=opti_leng;i++){
+					if(i>2){
+						var opti_nono1 = $('#label'+choose_num).text();
+						var opti_text = $('#textarea'+choose_num).val();
+
+					}else{
+						var opti_nono1 = $('#label'+i).text();
+						var opti_text = $('#textarea'+i).val();
+					}
+					var ms1 = opti_nono1.match(reg);
+					opti.push(ms1);
+					text.push(opti_text);
+				}
+				console.log(opti_text);
+				$.ajax({
+					type:'post',
+					url:"/home/question/getDate_blanks",
+					data:{
+						inser_time,
+						survey_name,
+						surve_brief,
+						ques_type,
+						text,
+						ques_tion,
+						ques_name,
+						opti,
+					},
+					datatype:'json',
+					success:function(e){
+
+					},
+					error:function(){
+						console.log('ajax执行出错，在这里处理!')
+					}
+				})
+			})
+		})
+
+		//选项内容自动改变
+		obinput3.addEventListener('change',function(){
+			var spantext1 = document.getElementById('textarea1');
+			spantext1.innerText = obinput3.value;
+
+		})
+		obinput4.addEventListener('change',function(){
+			var spantext2 = document.getElementById('textarea2');
+			spantext2.innerText = obinput4.value;
+		})
+
+
+		//增加选项和选择内容
+		var insert = document.getElementById('div9');
+		insert.addEventListener('click',function () {
+			textarea_text('Codiv','div6');
+		})
+	};
+	function textareas(){
+		right_sel.disabled = 'disabled';
+		window.div_rand = Math.floor(Math.random() * 10000 + 12);
+		window.div_rand_bo = Math.floor(Math.random() * 10000 + 12);
+		var hr = document.createElement('hr');
+		var top_maxdiv = document.createElement('div');
+		var botton_maxdiv = document.createElement('div');
+		botton_maxdiv.id = 'botton_maxdiv'+div_rand_bo;
+		botton_maxdiv.className = 'edit';
+		var question_left = document.getElementById('question_left');
+		question_left.appendChild(hr);
+		top_maxdiv.id = 'div'+div_rand;
+		question_left.appendChild(top_maxdiv);
+		question_left.appendChild(botton_maxdiv);
+		var Codivs = document.createElement("div");
+		Codivs.id = 'Codivs'+div_rand;
+		var maxdiv = document.getElementById('div'+div_rand);
+
+		var div1 = document.createElement("div");
+		var outside = document.createElement("div");
+		outside.id = 'outside'+div_rand;
+		div1.className = 'content';
+		div1.id = 'div_tow'+div_rand;
+		maxdiv.appendChild(outside);
+		maxdiv.appendChild(Codivs);
+		var outside_div = document.getElementById('outside'+div_rand);
+		outside_div.appendChild(div1);
+		var content_div = document.querySelector('#div_tow'+div_rand);
+		var title_div = document.createElement("div");
+		title_div.className = 'content_title';
+		title_div.id = 'title_div'+div_rand;
+		content_div.appendChild(title_div);
+		var ti_div = document.querySelector('#title_div'+div_rand);
+		var hhh = document.createElement("h3");
+		hhh.innerText = sums+'.'+'请输入题目';
+		hhh.id = 'hhh'+div_rand;
+		ti_div.appendChild(hhh);
+
+		var choose_top = document.createElement("div");
+		var choose_botton = document.createElement("div");
+		choose_top.className = 'content1';
+		choose_top.id = 'choose_top'+div_rand;
+		choose_botton.className = 'content1';
+		choose_botton.id = 'choose_botton'+div_rand;
+		var Codivs_div = document.getElementById('Codivs'+div_rand);
+		Codivs_div.appendChild(choose_top);
+		Codivs_div.appendChild(choose_botton);
+		var choose_top_lab = document.createElement("label");
+		choose_top_lab.id = 'choose_top_lab'+div_rand;
+		choose_top_lab.innerText = '1';
+		var choose_botton_lab = document.createElement("label");
+		choose_botton_lab.id = 'choose_botton_lab'+div_rand;
+		choose_botton_lab.innerText = '2';
+		var choose_top_inp = document.createElement("textarea");
+		choose_top_inp.style.resize = 'none';
+		choose_top_inp.id = 'textarea1'+div_rand;
+		var choose_botton_inp = document.createElement("textarea");
+		choose_botton_inp.style.resize = 'none';
+		choose_botton_inp.id = 'textarea2'+div_rand;
+
+		var choose_top_div = document.getElementById('choose_top'+div_rand);
+		choose_top_div.appendChild(choose_top_lab);
+		var label_top = document.getElementById('choose_top_lab'+div_rand);
+		label_top.appendChild(choose_top_inp);
+		var  choose_botton_div = document.getElementById('choose_botton'+div_rand);
+		choose_botton_div.appendChild(choose_botton_lab);
+		var label_botton = document.getElementById('choose_botton_lab'+div_rand);
+		label_botton.appendChild(choose_botton_inp);
+
+		//创建菜单
+		var menu_form = document.createElement("form");
+		menu_form.id = 'menu_form'+div_rand_bo;
+		var botton_max_div = document.getElementById('botton_maxdiv'+div_rand_bo);
+		botton_max_div.appendChild(menu_form);
+		var menu_srcipt = document.createElement("srcipt");
+		menu_srcipt.id = 'menu_srcipt'+div_rand_bo;
+		menu_srcipt.name = 'content';
+		menu_srcipt.type = 'text/plain';
+		var menu_form_div = document.getElementById('menu_form'+div_rand_bo);
+		menu_form_div.appendChild(menu_srcipt);
+		window.datatext = '';
+		show('menu_srcipt'+div_rand_bo,'hhh'+div_rand);
+
+		var botton_div = document.createElement("div");
+		botton_div.className = 'choice_hidd';
+		botton_div.id = 'botton_max_div'+div_rand_bo;
+		botton_max_div.appendChild(botton_div);
+		var botton_min_top = document.createElement("div");
+		botton_min_top.id = 'botton_min_top'+div_rand_bo;
+		var botton_min_bot = document.createElement("div");
+		botton_min_bot.id = 'botton_min_bot'+div_rand_bo;
+		var bottonmaxdiv = document.getElementById('botton_max_div'+div_rand_bo);
+		bottonmaxdiv.appendChild(botton_min_top);
+		bottonmaxdiv.appendChild(botton_min_bot);
+		var botton_input = document.createElement("input");
+		botton_input.type = 'text';
+		botton_input.value = '选项1';
+		botton_input.id = 'botton_input'+div_rand_bo;
+		var botton_input2 = document.createElement("input");
+		botton_input2.type = 'text';
+		botton_input2.value = '选项2';
+		botton_input2.id = 'botton_input2'+div_rand_bo;
+		var botton_span = document.createElement("span");
+		botton_span.innerText = '删除';;
+		botton_span.id = 'botton_span'+div_rand_bo;
+		var botton_span2 = document.createElement("span");
+		botton_span2.id = 'botton_span2'+div_rand_bo;
+		botton_span2.innerText = '删除';
+
+		var botton_min_top_id = document.getElementById('botton_min_top'+div_rand_bo);
+		botton_min_top_id.appendChild(botton_input);
+		botton_min_top_id.appendChild(botton_span);
+		var botton_min_bot_id = document.getElementById('botton_min_bot'+div_rand_bo);
+		botton_min_bot_id.appendChild(botton_input2);
+		botton_min_bot_id.appendChild(botton_span2);
+		var bo_inpit1 = document.getElementById('botton_input'+div_rand_bo);
+		var bo_inpit2 = document.getElementById('botton_input2'+div_rand_bo);
+		console.log(bo_inpit1);
+		bo_inpit1.addEventListener('change',function(){
+			var spantext1 = document.getElementById('textarea1'+div_rand);
+			spantext1.innerText = bo_inpit1.value;
+
+		})
+		bo_inpit2.addEventListener('change',function(){
+			var spantext2 = document.getElementById('textarea2'+div_rand);
+			spantext2.innerText = bo_inpit2.value;
+		})
+
+
+		var adder_div = document.createElement("div");
+		adder_div.className = 'choice_add';
+		adder_div.id = 'adder_div'+div_rand_bo;
+		adder_div.innerText = '增加';
+		var over_div = document.createElement("div");
+		over_div.className = 'choice_over';
+		over_div.innerText = '完成';
+		over_div.id = 'over_div'+div_rand_bo;
+		botton_max_div.appendChild(adder_div);
+		botton_max_div.appendChild(over_div);
+		window.runtet_nid = [];
+		var inserts = document.getElementById('adder_div'+div_rand_bo);
+		inserts.addEventListener('click',function () {
+			window.runtet_id = textarea_text('Codivs'+div_rand,'botton_min_bot'+div_rand_bo);
+			runtet_nid.push(runtet_id);
+		})
+		var choice_over = document.getElementById('over_div'+div_rand_bo);
+		choice_over.addEventListener('click',function () {
+			var div_choice_over = document.querySelector('#botton_maxdiv'+div_rand_bo);
+			div_choice_over.parentNode.removeChild(div_choice_over);
+			right_sel.removeAttribute('disabled');
+			rocount = 2;
+			count_radio++;
+			count_checkbox++;
+			count_textarea++;
+			sums++;
+
+			$(function () {
+				Date.prototype.Format = function (fmt) {
+					var o = {
+						"M+": this.getMonth() + 1, //月份
+						"d+": this.getDate(), //日
+						"H+": this.getHours() -8, //小时
+						"m+": this.getMinutes(), //分
+						"s+": this.getSeconds(), //秒
+						"q+": Math.floor((this.getMonth() + 3) / 3), //季度
+						"S": this.getMilliseconds() //毫秒
+					};
+					if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+					for (var k in o)
+						if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+					return fmt;
+				}
+				var inser_time = new Date().Format("yyyy-MM-dd-HH:mm:ss");
+				var reg = /\d+/g;
+				var survey_name = $('#Title').text();
+				var surve_brief = $('.head_inp').val();
+				var hhh = $('#hhh'+div_rand).text();
+				var hos = hhh.match(reg);
+				var spli = hhh.split(hos);
+				var ques_tion = hhh.replace(/[^0-9]/ig,"");
+				var ques_name = spli[1];
+				var ques_type = 'textarea';
+
+				var opti_leng = $('#Codivs'+div_rand+'>div').length;
+				var optis = [];
+				var span = [];
+				var state = [];
+				for(let i = 0;i<=opti_leng;i++){
+					if(i < 1){
+						var opti_top_lab = $('#choose_top_lab'+div_rand).text();
+						var opti_top_text = $('#textarea1'+div_rand).val();
+
+						var opti_botton_lab = $('#choose_botton_lab'+div_rand).text();
+						var opti_botton_text = $('#textarea2'+div_rand).val();
+
+						var ms1 = opti_top_lab.match(reg);
+						var ms2 = opti_botton_lab.match(reg);
+
+						optis.push(ms1,ms2);
+						span.push(opti_top_text,opti_botton_text);
+
+					}
+
+				}
+				if(runtet_nid !== null){
+					for(let u=0;u<runtet_nid.length;u++){
+						var opti_lab = $('#label'+runtet_nid[u]).text();
+						var opti_text = $('#textarea'+runtet_nid[u]).val();
+
+						var ms3 = opti_lab.match(reg);
+						optis.push(ms3);
+						span.push(opti_text);
+					}
+				}
+
+				$.unique(span);
+				$.unique(optis);
+				$.ajax({
+					type:'post',
+					url:"/home/question/getDate_blankes",
+					data:{
+						inser_time,
+						survey_name,
+						surve_brief,
+						ques_tion,
+						ques_name,
+						ques_type,
+						state,
+						optis,
+						span
+					},
+					datatype:'json',
+					success:function(e){
+
+					},
+					error:function(){
+						console.log('ajax执行出错，在这里处理!')
+					}
+				})
+			})
+		})
+	};
+	function textarea_text(codiv,div){
+		rocount++;
+		var Codiv1 = document.getElementById(codiv);
+		var div11 = document.createElement("div");
+		div11.className = 'content1';
+		window.choose_num = Math.floor(Math.random() * 10000 + 12);
+		window.topic_num = Math.floor(Math.random() * 10000 + 12);
+
+		div11.id = 'divc'+choose_num;
+		Codiv1.appendChild(div11);
+		var label3 = document.createElement("label");
+		label3.id = 'label'+choose_num;
+		label3.innerText = rocount;
+		var div14 = document.getElementById("divc"+choose_num);
+		div14.appendChild(label3);
+		var labeles = document.getElementById("label"+choose_num);
+
+		var input6 = document.createElement("textarea");
+		input6.style.resize = 'none';
+		input6.id = 'textarea'+choose_num;
+		labeles.appendChild(input6);
+
+		var div18 = document.getElementById(div);
+
+		var div17 = document.createElement("div");
+		var span7 = document.createElement("span");
+		var input67 = document.createElement("input");
+		input67.type = 'text';
+		div17.id = 'div'+topic_num;
+		div18.appendChild(div17);
+		//删除按钮功能
+		console.log(span7);
+		span7.addEventListener('click',function () {
+			var delect_choo = document.getElementById('divc'+choose_num);
+			var delect_top = document.getElementById('div'+topic_num);
+			delect_choo.parentNode.removeChild(delect_choo);
+			delect_top.parentNode.removeChild(delect_top);
+			rocount--;
+		});
+		input67.type = 'text';
+		var nuben = rocount;
+		input67.value = '选择'+nuben;
+		input67.id = 'input'+topic_num;
+		span7.id = 'span'+topic_num;
+		span7.innerText = '删除';
+		var div19 = document.getElementById('div'+topic_num);
+		div19.appendChild(input67);
+		div19.appendChild(span7);
+		//选项内容自动改变
+		var obinput6 = document.getElementById('input'+topic_num);
+		obinput6.addEventListener('change',function(){
+			var spantext5 = document.getElementById('textarea'+choose_num);
+			spantext5.innerText = obinput6.value;
+		})
+		return choose_num;
+	};
+</script>

@@ -1,0 +1,98 @@
+<?php /*a:1:{s:57:"D:\wamp64\www\wjj\application\home\view\index\create.html";i:1617868994;}*/ ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>问卷列表</title>
+    <link rel="stylesheet" href="/static/home/css/retss.css" />
+    <link rel="stylesheet" href="/static/home/css/font-awesome.css">
+    <script src="/static/home/script/create.js"></script>
+    <link href="/static/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+
+</head>
+<script>
+    function fsend(id){
+            window.location.href = '/home/Statistics/index?id='+id;
+    }
+    function confirmDel(id){             
+            window.location.href = '/home/Create/quit?id='+id;
+    }
+</script>
+<body>
+    <div class="box">
+        <div class="nav">
+           <li>问答军</li>
+            <div class="nav-right">
+                <a href="">我的问卷</a>
+                <a href="home/index">退出登录</a>
+                <a href="./quit">用户名称:<?php echo htmlentities($arr['front_name']); ?></a>
+            </div>
+        </div>
+        <div class="center">
+            <div class="center-left">
+                <button class="addwj" >
+                    <a href="./choose">创建问卷</a>
+                </button>
+            </div>
+            <div class="center-right">
+                <div class="lis">问卷列表</div>
+                <?php foreach($arrs as $value): ?>
+                <div class="content">
+                    <ul>
+                        <li><?php echo htmlentities($value['survey_name']); ?></li>
+                    </ul>
+
+                    <ul class="content-left">
+                        <li>ID:<?php echo htmlentities($value['survey_id']); ?></li>
+                        <li>发布日期:<?php echo htmlentities($value['inser_time']); ?></li>
+                    </ul>
+                    <div class="cen-cen">
+
+                    </div>
+                    <div class="acontent">
+                        <a href="">设计</a>
+                        <a href="">发送</a>
+                        <a onclick="fsend(<?php echo htmlentities($value['survey_id']); ?>)">分析</a>
+                    </div>
+                    <div class="bcontent">
+                        <button class="open">发布</button>
+                        <a href="#" onclick="confirmDel(<?php echo htmlentities($value['survey_id']); ?>)"><button>删除</button></a>
+                    </div>
+                </div>
+                 <?php endforeach; ?>
+                 <div class="raw">
+                     <?php echo $arrs; ?>
+                 </div>
+            </div>
+        </div>
+        <div class="model-box">
+            <div class="content">
+                <div class="title">
+                    <i class="close">×</i>
+                </div>
+            <form action="<?php echo url('home/Create/send'); ?>" method="post">
+                <input type="text" name="survey_start_time" id="inp">
+                <input type="submit" value="保存">
+            </form>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
+<script type="text/javascript">
+    // var _input=document.getElementById("inp");
+    // var date=new Date();
+    // var seperator='/';
+    // var year=date.getFullYear();
+    // var month=date.getMonth()+1;
+    // var strDate=date.getDate();
+    // if (month>=1 && strDate<=9) {
+    //     month='0'+month;
+    // }
+    // if (strDate>=0 && strDate<=9) {
+    //     strDate="0"+strDate;
+    // }
+    // var currentDate=year+seperator+month+seperator+strDate;
+    // _input.value=currentDate;
+    // _input.setAttribute('disabled','disabled');
+</script>

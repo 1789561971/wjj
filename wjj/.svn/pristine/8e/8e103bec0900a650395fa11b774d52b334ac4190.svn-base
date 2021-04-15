@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="69a2f3d2-5938-4d93-ae8f-8b6decbae154" name="默认更改列表" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/route/route.php" beforeDir="false" afterPath="$PROJECT_DIR$/route/route.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime/log/202103/25.log" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/log/202103/25.log" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/topthink/think-installer" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/topthink/think-captcha" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="1px5pJdmr5Pp7NozEZZNGs9CVgc" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\wapm\www\wendajun\application\home\view\index" />
+      <recent name="D:\wapm\www\wendajun\application\admin\view\index" />
+      <recent name="D:\wapm\www\wendajun\application\admin\view" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\wapm\www\wendajun\public\static\home\css" />
+      <recent name="D:\wamp64\www\wjjthink5.1\application\admin\view" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="font" />
+    </option>
+  </component>
+  <component name="SvnConfiguration" cleanupOnStartRun="true">
+    <configuration>C:\Users\Administrator\AppData\Roaming\Subversion</configuration>
+    <supportedVersion>125</supportedVersion>
+  </component>
+  <component name="SvnFileUrlMappingImpl">
+    <option name="myMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="D:\wapm\www\wendajun" />
+          <option name="myCopyRoot" value="D:\wapm\www\wendajun" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+    <option name="myMoreRealMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="D:\wapm\www\wendajun" />
+          <option name="myCopyRoot" value="D:\wapm\www\wendajun" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="69a2f3d2-5938-4d93-ae8f-8b6decbae154" name="默认更改列表" comment="" />
+      <created>1616112081183</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1616112081183</updated>
+      <workItem from="1616112085362" duration="2630000" />
+      <workItem from="1616117190265" duration="305000" />
+      <workItem from="1616117521266" duration="572000" />
+      <workItem from="1616379712476" duration="3255000" />
+      <workItem from="1616394785528" duration="7246000" />
+      <workItem from="1616407192132" duration="6718000" />
+      <workItem from="1616457780681" duration="1030000" />
+      <workItem from="1616458886852" duration="8064000" />
+      <workItem from="1616469710521" duration="118000" />
+      <workItem from="1616470456025" duration="409000" />
+      <workItem from="1616480847267" duration="5198000" />
+      <workItem from="1616547227049" duration="206000" />
+      <workItem from="1616547522165" duration="299000" />
+      <workItem from="1616548024455" duration="826000" />
+      <workItem from="1616548986743" duration="6731000" />
+      <workItem from="1616567601445" duration="1691000" />
+      <workItem from="1616569515835" duration="8898000" />
+      <workItem from="1616632407846" duration="2178000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="752" y="320" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1616411492025">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="752" y="320" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1616411492025" />
+    <state x="653" y="185" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1616548351487">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="653" y="185" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1616548351487" />
+    <state x="444" y="19" key="CommitChangelistDialog2" timestamp="1616117422990">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="444" y="19" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1616117422990" />
+    <state x="697" y="240" key="NewPhpClassDialog" timestamp="1616481744075">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="697" y="240" key="NewPhpClassDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1616481744075" />
+    <state x="329" y="78" key="SettingsEditor" timestamp="1616112584556">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="329" y="78" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1616112584556" />
+    <state x="616" y="240" width="672" height="677" key="run.anything.popup" timestamp="1616583904469">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" width="672" height="677" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1616583904469" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1616583902865">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1616583902865" />
+  </component>
+</project>
